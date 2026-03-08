@@ -1,0 +1,2 @@
+source D:/App/esp_idf/led_project/build/gdbinit/symbols
+source D:/App/esp_idf/led_project/build/gdbinit/connect
