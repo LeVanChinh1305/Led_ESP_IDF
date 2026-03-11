@@ -19,6 +19,7 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   "led_project.bin"
   "led_project.map"
   "project_elf_src_esp32c6.c"
+  "webserver.html.S"
   "x509_crt_bundle.S"
   )
 endif()

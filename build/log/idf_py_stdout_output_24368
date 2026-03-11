@@ -1,0 +1,3086 @@
+Command: D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace D:\App\esp_idf\led_project\build\led_project.elf D:\App\esp_idf\led_project\build\bootloader\bootloader.elf --force-color -m 'D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py' '-p' 'COM5'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xec8
+load:0x4086e610,len:0x31c4
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 31 2026 15:59:01[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (24) boot: efuse block revision: v0.2[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=420a0020 size=1cd7ch (118140) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0002cda4 vaddr=40800000 size=03274h ( 12916) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=940b8h (606392) map[0m
+[0;32mI (225) esp_image: segment 3: paddr=000c40e0 vaddr=40803274 size=17918h ( 96536) load[0m
+[0;32mI (246) esp_image: segment 4: paddr=000dba00 vaddr=4081ab90 size=037a8h ( 14248) load[0m
+[0;32mI (256) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (256) boot: Disabling RNG early entropy source...[0m
+[0;32mI (266) cpu_start: Unicore app[0m
+[0;32mI (275) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (275) cpu_start: Pro cpu start user code[0m
+[0;32mI (275) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     led_project[0m
+[0;32mI (285) app_init: App version:      0015cd1-dirty[0m
+[0;32mI (289) app_init: Compile time:     Mar  9 2026 22:17:18[0m
+[0;32mI (294) app_init: ELF file SHA256:  bbae4d190...[0m
+[0;32mI (299) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (303) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (306) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (310) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (314) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (321) heap_init: At 408237A0 len 00058E70 (355 KiB): RAM[0m
+[0;32mI (326) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (331) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (340) spi_flash: flash io: dio[0m
+[0;32mI (343) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (349) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (356) coexist: coex firmware version: 7260f71[0m
+[0;32mI (360) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (364) main_task: Started on CPU0[0m
+[0;32mI (384) main_task: Calling app_main()[0m
+[0;32mI (384) MAIN: App started![0m
+[0;32mI (394) wifi: Initializing WiFi in station mode...[0m
+[0;32mI (394) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (394) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (404) wifi:wifi driver task: 40829d8c, prio:23, stack:6656, core=0[0m
+[0;32mI (404) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (404) wifi:wifi certification version: v7.0[0m
+[0;32mI (404) wifi:config NVS flash: enabled[0m
+[0;32mI (414) wifi:config nano formatting: disabled[0m
+[0;32mI (414) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (424) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (424) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (434) wifi:Init management short buffer num: 32[0m
+[0;32mI (434) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (444) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (444) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (444) wifi:Init static rx buffer num: 10[0m
+[0;32mI (454) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (454) wifi_init: rx ba win: 6[0m
+[0;32mI (464) wifi_init: accept mbox: 6[0m
+[0;32mI (464) wifi_init: tcpip mbox: 32[0m
+[0;32mI (464) wifi_init: udp mbox: 6[0m
+[0;32mI (464) wifi_init: tcp mbox: 6[0m
+[0;32mI (474) wifi_init: tcp tx win: 5760[0m
+[0;32mI (474) wifi_init: tcp rx win: 5760[0m
+[0;32mI (474) wifi_init: tcp mss: 1440[0m
+[0;32mI (484) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (484) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (484) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (494) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (504) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (574) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (574) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (574) wifi:(agc)0x600a7128:0xd210ba00, min.avgNF:0xce->0xd2(dB), RCalCount:0x10a, min.RRssi:0xa00(-96.00)[0m
+[0;32mI (584) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (594) wifi:mode : sta (54:32:04:0c:fb:e4)[0m
+[0;32mI (594) wifi:enable tsf[0m
+[0;32mI (604) wifi: WiFi initialization completed.[0m
+[0;32mI (604) CTRL_TASK: Send LED ON[0m
+[0;32mI (604) led task : led on[0m
+[0;32mI (614) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (614) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (624) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (624) main_task: Returned from app_main()[0m
+[0;32mI (634) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (634) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (644) wifi:(trc)phytype:CBW20-SGI, snr:45, maxRate:144, highestRateIdx:0[0m
+[0;33mW (644) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (654) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (664) wifi:ifidx:0, rssi:-52, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (674) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:0(no restriction)[0m
+[0;32mI (1014) wifi:connected with 509 TQV, aid = 6, channel 11, BW20, bssid = a8:15:4d:e2:2c:78[0m
+[0;32mI (1014) wifi:security: WPA2-PSK, phy:bgn, rssi:-52, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1024) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1024) wifi:pm start, type:1, aid:0x6, trans-BSSID:a8:15:4d:e2:2c:78, BSSID[5]:0x78, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1034) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1044) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1044) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1064) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1074) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1084) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1084) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1094) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1104) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (1614) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100782c, TALO:0xe24d15a8, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (2624) esp_netif_handlers: sta ip: 192.168.83.115, mask: 255.255.255.0, gw: 192.168.83.1[0m
+[0;32mI (2624) wifi: Got IP: 192.168.83.115[0m
+[0;32mI (2624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2624) led task : led off[0m
+[0;32mI (4624) CTRL_TASK: Send LED ON[0m
+[0;32mI (4624) led task : led on[0m
+[0;32mI (6624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (6624) led task : led off[0m
+[0;32mI (8624) CTRL_TASK: Send LED ON[0m
+[0;32mI (8624) led task : led on[0m
+[0;32mI (10624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (10624) led task : led off[0m
+[0;32mI (12624) CTRL_TASK: Send LED ON[0m
+[0;32mI (12624) led task : led on[0m
+[0;32mI (14624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (14624) led task : led off[0m
+[0;32mI (16624) CTRL_TASK: Send LED ON[0m
+[0;32mI (16624) led task : led on[0m
+[0;32mI (18624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (18624) led task : led off[0m
+[0;32mI (20624) CTRL_TASK: Send LED ON[0m
+[0;32mI (20624) led task : led on[0m
+[0;32mI (22624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (22624) led task : led off[0m
+[0;32mI (24624) CTRL_TASK: Send LED ON[0m
+[0;32mI (24624) led task : led on[0m
+[0;32mI (26624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (26624) led task : led off[0m
+[0;32mI (28624) CTRL_TASK: Send LED ON[0m
+[0;32mI (28624) led task : led on[0m
+[0;32mI (30624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (30624) led task : led off[0m
+[0;32mI (32624) CTRL_TASK: Send LED ON[0m
+[0;32mI (32624) led task : led on[0m
+[0;32mI (34624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (34624) led task : led off[0m
+[0;32mI (36624) CTRL_TASK: Send LED ON[0m
+[0;32mI (36624) led task : led on[0m
+[0;32mI (38624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (38624) led task : led off[0m
+[0;32mI (40624) CTRL_TASK: Send LED ON[0m
+[0;32mI (40624) led task : led on[0m
+[0;32mI (42624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (42624) led task : led off[0m
+[0;32mI (44624) CTRL_TASK: Send LED ON[0m
+[0;32mI (44624) led task : led on[0m
+[0;32mI (46624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (46624) led task : led off[0m
+[0;32mI (48624) CTRL_TASK: Send LED ON[0m
+[0;32mI (48624) led task : led on[0m
+[0;32mI (50624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (50624) led task : led off[0m
+[0;32mI (52624) CTRL_TASK: Send LED ON[0m
+[0;32mI (52624) led task : led on[0m
+[0;32mI (54624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (54624) led task : led off[0m
+[0;32mI (56624) CTRL_TASK: Send LED ON[0m
+[0;32mI (56624) led task : led on[0m
+[0;32mI (58624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (58624) led task : led off[0m
+[0;32mI (60624) CTRL_TASK: Send LED ON[0m
+[0;32mI (60624) led task : led on[0m
+[0;32mI (62624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (62624) led task : led off[0m
+[0;32mI (64624) CTRL_TASK: Send LED ON[0m
+[0;32mI (64624) led task : led on[0m
+[0;32mI (66624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (66624) led task : led off[0m
+[0;32mI (68624) CTRL_TASK: Send LED ON[0m
+[0;32mI (68624) led task : led on[0m
+[0;32mI (70624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (70624) led task : led off[0m
+[0;32mI (72624) CTRL_TASK: Send LED ON[0m
+[0;32mI (72624) led task : led on[0m
+[0;32mI (74624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (74624) led task : led off[0m
+[0;32mI (76624) CTRL_TASK: Send LED ON[0m
+[0;32mI (76624) led task : led on[0m
+[0;32mI (78624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (78624) led task : led off[0m
+[0;32mI (80624) CTRL_TASK: Send LED ON[0m
+[0;32mI (80624) led task : led on[0m
+[0;32mI (82624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (82624) led task : led off[0m
+[0;32mI (84624) CTRL_TASK: Send LED ON[0m
+[0;32mI (84624) led task : led on[0m
+[0;32mI (86624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (86624) led task : led off[0m
+[0;32mI (88624) CTRL_TASK: Send LED ON[0m
+[0;32mI (88624) led task : led on[0m
+[0;32mI (90624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (90624) led task : led off[0m
+[0;32mI (92624) CTRL_TASK: Send LED ON[0m
+[0;32mI (92624) led task : led on[0m
+[0;32mI (94624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (94624) led task : led off[0m
+[0;32mI (96624) CTRL_TASK: Send LED ON[0m
+[0;32mI (96624) led task : led on[0m
+[0;32mI (98624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (98624) led task : led off[0m
+[0;32mI (100624) CTRL_TASK: Send LED ON[0m
+[0;32mI (100624) led task : led on[0m
+[0;32mI (102624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (102624) led task : led off[0m
+[0;32mI (104624) CTRL_TASK: Send LED ON[0m
+[0;32mI (104624) led task : led on[0m
+[0;32mI (106624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (106624) led task : led off[0m
+[0;32mI (108624) CTRL_TASK: Send LED ON[0m
+[0;32mI (108624) led task : led on[0m
+[0;32mI (110624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (110624) led task : led off[0m
+[0;32mI (112624) CTRL_TASK: Send LED ON[0m
+[0;32mI (112624) led task : led on[0m
+[0;32mI (114624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (114624) led task : led off[0m
+[0;32mI (116624) CTRL_TASK: Send LED ON[0m
+[0;32mI (116624) led task : led on[0m
+[0;32mI (118624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (118624) led task : led off[0m
+[0;32mI (120624) CTRL_TASK: Send LED ON[0m
+[0;32mI (120624) led task : led on[0m
+[0;32mI (122624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (122624) led task : led off[0m
+[0;32mI (124624) CTRL_TASK: Send LED ON[0m
+[0;32mI (124624) led task : led on[0m
+[0;32mI (126624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (126624) led task : led off[0m
+[0;32mI (128624) CTRL_TASK: Send LED ON[0m
+[0;32mI (128624) led task : led on[0m
+[0;32mI (130624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (130624) led task : led off[0m
+[0;32mI (132624) CTRL_TASK: Send LED ON[0m
+[0;32mI (132624) led task : led on[0m
+[0;32mI (134624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (134624) led task : led off[0m
+[0;32mI (136624) CTRL_TASK: Send LED ON[0m
+[0;32mI (136624) led task : led on[0m
+[0;32mI (138624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (138624) led task : led off[0m
+[0;32mI (140624) CTRL_TASK: Send LED ON[0m
+[0;32mI (140624) led task : led on[0m
+[0;32mI (142624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (142624) led task : led off[0m
+[0;32mI (144624) CTRL_TASK: Send LED ON[0m
+[0;32mI (144624) led task : led on[0m
+[0;32mI (146624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (146624) led task : led off[0m
+[0;32mI (148624) CTRL_TASK: Send LED ON[0m
+[0;32mI (148624) led task : led on[0m
+[0;32mI (150624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (150624) led task : led off[0m
+[0;32mI (152624) CTRL_TASK: Send LED ON[0m
+[0;32mI (152624) led task : led on[0m
+[0;32mI (154624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (154624) led task : led off[0m
+[0;32mI (156624) CTRL_TASK: Send LED ON[0m
+[0;32mI (156624) led task : led on[0m
+[0;32mI (158624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (158624) led task : led off[0m
+[0;32mI (160624) CTRL_TASK: Send LED ON[0m
+[0;32mI (160624) led task : led on[0m
+[0;32mI (162624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (162624) led task : led off[0m
+[0;32mI (164624) CTRL_TASK: Send LED ON[0m
+[0;32mI (164624) led task : led on[0m
+[0;32mI (166624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (166624) led task : led off[0m
+[0;32mI (168624) CTRL_TASK: Send LED ON[0m
+[0;32mI (168624) led task : led on[0m
+[0;32mI (170624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (170624) led task : led off[0m
+[0;32mI (172624) CTRL_TASK: Send LED ON[0m
+[0;32mI (172624) led task : led on[0m
+[0;32mI (174624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (174624) led task : led off[0m
+[0;32mI (176624) CTRL_TASK: Send LED ON[0m
+[0;32mI (176624) led task : led on[0m
+[0;32mI (178624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (178624) led task : led off[0m
+[0;32mI (180624) CTRL_TASK: Send LED ON[0m
+[0;32mI (180624) led task : led on[0m
+[0;32mI (182624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (182624) led task : led off[0m
+[0;32mI (184624) CTRL_TASK: Send LED ON[0m
+[0;32mI (184624) led task : led on[0m
+[0;32mI (186624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (186624) led task : led off[0m
+[0;32mI (188624) CTRL_TASK: Send LED ON[0m
+[0;32mI (188624) led task : led on[0m
+[0;32mI (190624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (190624) led task : led off[0m
+[0;32mI (192624) CTRL_TASK: Send LED ON[0m
+[0;32mI (192624) led task : led on[0m
+[0;32mI (194624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (194624) led task : led off[0m
+[0;32mI (196624) CTRL_TASK: Send LED ON[0m
+[0;32mI (196624) led task : led on[0m
+[0;32mI (198624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (198624) led task : led off[0m
+[0;32mI (200624) CTRL_TASK: Send LED ON[0m
+[0;32mI (200624) led task : led on[0m
+[0;32mI (202624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (202624) led task : led off[0m
+[0;32mI (204624) CTRL_TASK: Send LED ON[0m
+[0;32mI (204624) led task : led on[0m
+[0;32mI (206624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (206624) led task : led off[0m
+[0;32mI (208624) CTRL_TASK: Send LED ON[0m
+[0;32mI (208624) led task : led on[0m
+[0;32mI (210624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (210624) led task : led off[0m
+[0;32mI (212624) CTRL_TASK: Send LED ON[0m
+[0;32mI (212624) led task : led on[0m
+[0;32mI (214624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (214624) led task : led off[0m
+[0;32mI (216624) CTRL_TASK: Send LED ON[0m
+[0;32mI (216624) led task : led on[0m
+[0;32mI (218624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (218624) led task : led off[0m
+[0;32mI (220624) CTRL_TASK: Send LED ON[0m
+[0;32mI (220624) led task : led on[0m
+[0;32mI (222624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (222624) led task : led off[0m
+[0;32mI (224624) CTRL_TASK: Send LED ON[0m
+[0;32mI (224624) led task : led on[0m
+[0;32mI (226624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (226624) led task : led off[0m
+[0;32mI (228624) CTRL_TASK: Send LED ON[0m
+[0;32mI (228624) led task : led on[0m
+[0;32mI (230624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (230624) led task : led off[0m
+[0;32mI (232624) CTRL_TASK: Send LED ON[0m
+[0;32mI (232624) led task : led on[0m
+[0;32mI (234624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (234624) led task : led off[0m
+[0;32mI (236624) CTRL_TASK: Send LED ON[0m
+[0;32mI (236624) led task : led on[0m
+[0;32mI (238624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (238624) led task : led off[0m
+[0;32mI (240624) CTRL_TASK: Send LED ON[0m
+[0;32mI (240624) led task : led on[0m
+[0;32mI (242624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (242624) led task : led off[0m
+[0;32mI (244624) CTRL_TASK: Send LED ON[0m
+[0;32mI (244624) led task : led on[0m
+[0;32mI (246624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (246624) led task : led off[0m
+[0;32mI (248624) CTRL_TASK: Send LED ON[0m
+[0;32mI (248624) led task : led on[0m
+[0;32mI (250624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (250624) led task : led off[0m
+[0;32mI (252624) CTRL_TASK: Send LED ON[0m
+[0;32mI (252624) led task : led on[0m
+[0;32mI (254624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (254624) led task : led off[0m
+[0;32mI (256624) CTRL_TASK: Send LED ON[0m
+[0;32mI (256624) led task : led on[0m
+[0;32mI (258624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (258624) led task : led off[0m
+[0;32mI (260624) CTRL_TASK: Send LED ON[0m
+[0;32mI (260624) led task : led on[0m
+[0;32mI (262624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (262624) led task : led off[0m
+[0;32mI (264624) CTRL_TASK: Send LED ON[0m
+[0;32mI (264624) led task : led on[0m
+[0;32mI (266624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (266624) led task : led off[0m
+[0;32mI (268624) CTRL_TASK: Send LED ON[0m
+[0;32mI (268624) led task : led on[0m
+[0;32mI (270624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (270624) led task : led off[0m
+[0;32mI (272624) CTRL_TASK: Send LED ON[0m
+[0;32mI (272624) led task : led on[0m
+[0;32mI (274624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (274624) led task : led off[0m
+[0;32mI (276624) CTRL_TASK: Send LED ON[0m
+[0;32mI (276624) led task : led on[0m
+[0;32mI (278624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (278624) led task : led off[0m
+[0;32mI (280624) CTRL_TASK: Send LED ON[0m
+[0;32mI (280624) led task : led on[0m
+[0;32mI (282624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (282624) led task : led off[0m
+[0;32mI (284624) CTRL_TASK: Send LED ON[0m
+[0;32mI (284624) led task : led on[0m
+[0;32mI (286624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (286624) led task : led off[0m
+[0;32mI (288624) CTRL_TASK: Send LED ON[0m
+[0;32mI (288624) led task : led on[0m
+[0;32mI (290624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (290624) led task : led off[0m
+[0;32mI (292624) CTRL_TASK: Send LED ON[0m
+[0;32mI (292624) led task : led on[0m
+[0;32mI (294624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (294624) led task : led off[0m
+[0;32mI (296624) CTRL_TASK: Send LED ON[0m
+[0;32mI (296624) led task : led on[0m
+[0;32mI (298624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (298624) led task : led off[0m
+[0;32mI (300624) CTRL_TASK: Send LED ON[0m
+[0;32mI (300624) led task : led on[0m
+[0;32mI (302624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (302624) led task : led off[0m
+[0;32mI (304624) CTRL_TASK: Send LED ON[0m
+[0;32mI (304624) led task : led on[0m
+[0;32mI (306624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (306624) led task : led off[0m
+[0;32mI (308624) CTRL_TASK: Send LED ON[0m
+[0;32mI (308624) led task : led on[0m
+[0;32mI (310624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (310624) led task : led off[0m
+[0;32mI (312624) CTRL_TASK: Send LED ON[0m
+[0;32mI (312624) led task : led on[0m
+[0;32mI (314624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (314624) led task : led off[0m
+[0;32mI (316624) CTRL_TASK: Send LED ON[0m
+[0;32mI (316624) led task : led on[0m
+[0;32mI (318624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (318624) led task : led off[0m
+[0;32mI (320624) CTRL_TASK: Send LED ON[0m
+[0;32mI (320624) led task : led on[0m
+[0;32mI (322624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (322624) led task : led off[0m
+[0;32mI (324624) CTRL_TASK: Send LED ON[0m
+[0;32mI (324624) led task : led on[0m
+[0;32mI (326624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (326624) led task : led off[0m
+[0;32mI (328624) CTRL_TASK: Send LED ON[0m
+[0;32mI (328624) led task : led on[0m
+[0;32mI (330624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (330624) led task : led off[0m
+[0;32mI (332624) CTRL_TASK: Send LED ON[0m
+[0;32mI (332624) led task : led on[0m
+[0;32mI (334624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (334624) led task : led off[0m
+[0;32mI (336624) CTRL_TASK: Send LED ON[0m
+[0;32mI (336624) led task : led on[0m
+[0;32mI (338624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (338624) led task : led off[0m
+[0;32mI (340624) CTRL_TASK: Send LED ON[0m
+[0;32mI (340624) led task : led on[0m
+[0;32mI (342624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (342624) led task : led off[0m
+[0;32mI (344624) CTRL_TASK: Send LED ON[0m
+[0;32mI (344624) led task : led on[0m
+[0;32mI (346624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (346624) led task : led off[0m
+[0;32mI (348624) CTRL_TASK: Send LED ON[0m
+[0;32mI (348624) led task : led on[0m
+[0;32mI (350624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (350624) led task : led off[0m
+[0;32mI (352624) CTRL_TASK: Send LED ON[0m
+[0;32mI (352624) led task : led on[0m
+[0;32mI (354624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (354624) led task : led off[0m
+[0;32mI (356624) CTRL_TASK: Send LED ON[0m
+[0;32mI (356624) led task : led on[0m
+[0;32mI (358624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (358624) led task : led off[0m
+[0;32mI (360624) CTRL_TASK: Send LED ON[0m
+[0;32mI (360624) led task : led on[0m
+[0;32mI (362624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (362624) led task : led off[0m
+[0;32mI (364624) CTRL_TASK: Send LED ON[0m
+[0;32mI (364624) led task : led on[0m
+[0;32mI (366624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (366624) led task : led off[0m
+[0;32mI (368624) CTRL_TASK: Send LED ON[0m
+[0;32mI (368624) led task : led on[0m
+[0;32mI (370624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (370624) led task : led off[0m
+[0;32mI (372624) CTRL_TASK: Send LED ON[0m
+[0;32mI (372624) led task : led on[0m
+[0;32mI (374624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (374624) led task : led off[0m
+[0;32mI (376624) CTRL_TASK: Send LED ON[0m
+[0;32mI (376624) led task : led on[0m
+[0;32mI (378624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (378624) led task : led off[0m
+[0;32mI (380624) CTRL_TASK: Send LED ON[0m
+[0;32mI (380624) led task : led on[0m
+[0;32mI (382624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (382624) led task : led off[0m
+[0;32mI (384624) CTRL_TASK: Send LED ON[0m
+[0;32mI (384624) led task : led on[0m
+[0;32mI (386624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (386624) led task : led off[0m
+[0;32mI (388624) CTRL_TASK: Send LED ON[0m
+[0;32mI (388624) led task : led on[0m
+[0;32mI (390624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (390624) led task : led off[0m
+[0;32mI (392624) CTRL_TASK: Send LED ON[0m
+[0;32mI (392624) led task : led on[0m
+[0;32mI (394624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (394624) led task : led off[0m
+[0;32mI (396624) CTRL_TASK: Send LED ON[0m
+[0;32mI (396624) led task : led on[0m
+[0;32mI (398624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (398624) led task : led off[0m
+[0;32mI (400624) CTRL_TASK: Send LED ON[0m
+[0;32mI (400624) led task : led on[0m
+[0;32mI (402624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (402624) led task : led off[0m
+[0;32mI (404624) CTRL_TASK: Send LED ON[0m
+[0;32mI (404624) led task : led on[0m
+[0;32mI (406624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (406624) led task : led off[0m
+[0;32mI (408624) CTRL_TASK: Send LED ON[0m
+[0;32mI (408624) led task : led on[0m
+[0;32mI (410624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (410624) led task : led off[0m
+[0;32mI (412624) CTRL_TASK: Send LED ON[0m
+[0;32mI (412624) led task : led on[0m
+[0;32mI (414624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (414624) led task : led off[0m
+[0;32mI (416624) CTRL_TASK: Send LED ON[0m
+[0;32mI (416624) led task : led on[0m
+[0;32mI (418624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (418624) led task : led off[0m
+[0;32mI (420624) CTRL_TASK: Send LED ON[0m
+[0;32mI (420624) led task : led on[0m
+[0;32mI (422624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (422624) led task : led off[0m
+[0;32mI (424624) CTRL_TASK: Send LED ON[0m
+[0;32mI (424624) led task : led on[0m
+[0;32mI (426624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (426624) led task : led off[0m
+[0;32mI (428624) CTRL_TASK: Send LED ON[0m
+[0;32mI (428624) led task : led on[0m
+[0;32mI (430624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (430624) led task : led off[0m
+[0;32mI (432624) CTRL_TASK: Send LED ON[0m
+[0;32mI (432624) led task : led on[0m
+[0;32mI (434624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (434624) led task : led off[0m
+[0;32mI (436624) CTRL_TASK: Send LED ON[0m
+[0;32mI (436624) led task : led on[0m
+[0;32mI (438624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (438624) led task : led off[0m
+[0;32mI (440624) CTRL_TASK: Send LED ON[0m
+[0;32mI (440624) led task : led on[0m
+[0;32mI (442624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (442624) led task : led off[0m
+[0;32mI (444624) CTRL_TASK: Send LED ON[0m
+[0;32mI (444624) led task : led on[0m
+[0;32mI (446624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (446624) led task : led off[0m
+[0;32mI (448624) CTRL_TASK: Send LED ON[0m
+[0;32mI (448624) led task : led on[0m
+[0;32mI (450624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (450624) led task : led off[0m
+[0;32mI (452624) CTRL_TASK: Send LED ON[0m
+[0;32mI (452624) led task : led on[0m
+[0;32mI (454624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (454624) led task : led off[0m
+[0;32mI (456624) CTRL_TASK: Send LED ON[0m
+[0;32mI (456624) led task : led on[0m
+[0;32mI (458624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (458624) led task : led off[0m
+[0;32mI (460624) CTRL_TASK: Send LED ON[0m
+[0;32mI (460624) led task : led on[0m
+[0;32mI (462624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (462624) led task : led off[0m
+[0;32mI (464624) CTRL_TASK: Send LED ON[0m
+[0;32mI (464624) led task : led on[0m
+[0;32mI (466624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (466624) led task : led off[0m
+[0;32mI (468624) CTRL_TASK: Send LED ON[0m
+[0;32mI (468624) led task : led on[0m
+[0;32mI (470624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (470624) led task : led off[0m
+[0;32mI (472624) CTRL_TASK: Send LED ON[0m
+[0;32mI (472624) led task : led on[0m
+[0;32mI (474624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (474624) led task : led off[0m
+[0;32mI (476624) CTRL_TASK: Send LED ON[0m
+[0;32mI (476624) led task : led on[0m
+[0;32mI (478624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (478624) led task : led off[0m
+[0;32mI (480624) CTRL_TASK: Send LED ON[0m
+[0;32mI (480624) led task : led on[0m
+[0;32mI (482624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (482624) led task : led off[0m
+[0;32mI (484624) CTRL_TASK: Send LED ON[0m
+[0;32mI (484624) led task : led on[0m
+[0;32mI (486624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (486624) led task : led off[0m
+[0;32mI (488624) CTRL_TASK: Send LED ON[0m
+[0;32mI (488624) led task : led on[0m
+[0;32mI (490624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (490624) led task : led off[0m
+[0;32mI (492624) CTRL_TASK: Send LED ON[0m
+[0;32mI (492624) led task : led on[0m
+[0;32mI (494624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (494624) led task : led off[0m
+[0;32mI (496624) CTRL_TASK: Send LED ON[0m
+[0;32mI (496624) led task : led on[0m
+[0;32mI (498624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (498624) led task : led off[0m
+[0;32mI (500624) CTRL_TASK: Send LED ON[0m
+[0;32mI (500624) led task : led on[0m
+[0;32mI (502624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (502624) led task : led off[0m
+[0;32mI (504624) CTRL_TASK: Send LED ON[0m
+[0;32mI (504624) led task : led on[0m
+[0;32mI (506624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (506624) led task : led off[0m
+[0;32mI (508624) CTRL_TASK: Send LED ON[0m
+[0;32mI (508624) led task : led on[0m
+[0;32mI (510624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (510624) led task : led off[0m
+[0;32mI (512624) CTRL_TASK: Send LED ON[0m
+[0;32mI (512624) led task : led on[0m
+[0;32mI (514624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (514624) led task : led off[0m
+[0;32mI (516624) CTRL_TASK: Send LED ON[0m
+[0;32mI (516624) led task : led on[0m
+[0;32mI (518624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (518624) led task : led off[0m
+[0;32mI (520624) CTRL_TASK: Send LED ON[0m
+[0;32mI (520624) led task : led on[0m
+[0;32mI (522624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (522624) led task : led off[0m
+[0;32mI (524624) CTRL_TASK: Send LED ON[0m
+[0;32mI (524624) led task : led on[0m
+[0;32mI (526624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (526624) led task : led off[0m
+[0;32mI (528624) CTRL_TASK: Send LED ON[0m
+[0;32mI (528624) led task : led on[0m
+[0;32mI (530624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (530624) led task : led off[0m
+[0;32mI (532624) CTRL_TASK: Send LED ON[0m
+[0;32mI (532624) led task : led on[0m
+[0;32mI (534624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (534624) led task : led off[0m
+[0;32mI (536624) CTRL_TASK: Send LED ON[0m
+[0;32mI (536624) led task : led on[0m
+[0;32mI (538624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (538624) led task : led off[0m
+[0;32mI (540624) CTRL_TASK: Send LED ON[0m
+[0;32mI (540624) led task : led on[0m
+[0;32mI (542624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (542624) led task : led off[0m
+[0;32mI (544624) CTRL_TASK: Send LED ON[0m
+[0;32mI (544624) led task : led on[0m
+[0;32mI (546624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (546624) led task : led off[0m
+[0;32mI (548624) CTRL_TASK: Send LED ON[0m
+[0;32mI (548624) led task : led on[0m
+[0;32mI (550624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (550624) led task : led off[0m
+[0;32mI (552624) CTRL_TASK: Send LED ON[0m
+[0;32mI (552624) led task : led on[0m
+[0;32mI (554624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (554624) led task : led off[0m
+[0;32mI (556624) CTRL_TASK: Send LED ON[0m
+[0;32mI (556624) led task : led on[0m
+[0;32mI (558624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (558624) led task : led off[0m
+[0;32mI (560624) CTRL_TASK: Send LED ON[0m
+[0;32mI (560624) led task : led on[0m
+[0;32mI (562624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (562624) led task : led off[0m
+[0;32mI (564624) CTRL_TASK: Send LED ON[0m
+[0;32mI (564624) led task : led on[0m
+[0;32mI (566624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (566624) led task : led off[0m
+[0;32mI (568624) CTRL_TASK: Send LED ON[0m
+[0;32mI (568624) led task : led on[0m
+[0;32mI (570624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (570624) led task : led off[0m
+[0;32mI (572624) CTRL_TASK: Send LED ON[0m
+[0;32mI (572624) led task : led on[0m
+[0;32mI (574624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (574624) led task : led off[0m
+[0;32mI (576624) CTRL_TASK: Send LED ON[0m
+[0;32mI (576624) led task : led on[0m
+[0;32mI (578624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (578624) led task : led off[0m
+[0;32mI (580624) CTRL_TASK: Send LED ON[0m
+[0;32mI (580624) led task : led on[0m
+[0;32mI (582624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (582624) led task : led off[0m
+[0;32mI (584624) CTRL_TASK: Send LED ON[0m
+[0;32mI (584624) led task : led on[0m
+[0;32mI (586624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (586624) led task : led off[0m
+[0;32mI (588624) CTRL_TASK: Send LED ON[0m
+[0;32mI (588624) led task : led on[0m
+[0;32mI (590624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (590624) led task : led off[0m
+[0;32mI (592624) CTRL_TASK: Send LED ON[0m
+[0;32mI (592624) led task : led on[0m
+[0;32mI (594624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (594624) led task : led off[0m
+[0;32mI (596624) CTRL_TASK: Send LED ON[0m
+[0;32mI (596624) led task : led on[0m
+[0;32mI (598624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (598624) led task : led off[0m
+[0;32mI (600624) CTRL_TASK: Send LED ON[0m
+[0;32mI (600624) led task : led on[0m
+[0;32mI (602624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (602624) led task : led off[0m
+[0;32mI (604624) CTRL_TASK: Send LED ON[0m
+[0;32mI (604624) led task : led on[0m
+[0;32mI (606624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (606624) led task : led off[0m
+[0;32mI (608624) CTRL_TASK: Send LED ON[0m
+[0;32mI (608624) led task : led on[0m
+[0;32mI (610624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (610624) led task : led off[0m
+[0;32mI (612624) CTRL_TASK: Send LED ON[0m
+[0;32mI (612624) led task : led on[0m
+[0;32mI (614624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (614624) led task : led off[0m
+[0;32mI (616624) CTRL_TASK: Send LED ON[0m
+[0;32mI (616624) led task : led on[0m
+[0;32mI (618624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (618624) led task : led off[0m
+[0;32mI (620624) CTRL_TASK: Send LED ON[0m
+[0;32mI (620624) led task : led on[0m
+[0;32mI (622624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (622624) led task : led off[0m
+[0;32mI (624624) CTRL_TASK: Send LED ON[0m
+[0;32mI (624624) led task : led on[0m
+[0;32mI (626624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (626624) led task : led off[0m
+[0;32mI (628624) CTRL_TASK: Send LED ON[0m
+[0;32mI (628624) led task : led on[0m
+[0;32mI (630624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (630624) led task : led off[0m
+[0;32mI (632624) CTRL_TASK: Send LED ON[0m
+[0;32mI (632624) led task : led on[0m
+[0;32mI (634624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (634624) led task : led off[0m
+[0;32mI (636624) CTRL_TASK: Send LED ON[0m
+[0;32mI (636624) led task : led on[0m
+[0;32mI (638624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (638624) led task : led off[0m
+[0;32mI (640624) CTRL_TASK: Send LED ON[0m
+[0;32mI (640624) led task : led on[0m
+[0;32mI (642624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (642624) led task : led off[0m
+[0;32mI (644624) CTRL_TASK: Send LED ON[0m
+[0;32mI (644624) led task : led on[0m
+[0;32mI (646624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (646624) led task : led off[0m
+[0;32mI (648624) CTRL_TASK: Send LED ON[0m
+[0;32mI (648624) led task : led on[0m
+[0;32mI (650624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (650624) led task : led off[0m
+[0;32mI (652624) CTRL_TASK: Send LED ON[0m
+[0;32mI (652624) led task : led on[0m
+[0;32mI (654624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (654624) led task : led off[0m
+[0;32mI (656624) CTRL_TASK: Send LED ON[0m
+[0;32mI (656624) led task : led on[0m
+[0;32mI (658624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (658624) led task : led off[0m
+[0;32mI (660624) CTRL_TASK: Send LED ON[0m
+[0;32mI (660624) led task : led on[0m
+[0;32mI (662624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (662624) led task : led off[0m
+[0;32mI (664624) CTRL_TASK: Send LED ON[0m
+[0;32mI (664624) led task : led on[0m
+[0;32mI (666624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (666624) led task : led off[0m
+[0;32mI (668624) CTRL_TASK: Send LED ON[0m
+[0;32mI (668624) led task : led on[0m
+[0;32mI (670624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (670624) led task : led off[0m
+[0;32mI (672624) CTRL_TASK: Send LED ON[0m
+[0;32mI (672624) led task : led on[0m
+[0;32mI (674624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (674624) led task : led off[0m
+[0;32mI (676624) CTRL_TASK: Send LED ON[0m
+[0;32mI (676624) led task : led on[0m
+[0;32mI (678624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (678624) led task : led off[0m
+[0;32mI (680624) CTRL_TASK: Send LED ON[0m
+[0;32mI (680624) led task : led on[0m
+[0;32mI (682624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (682624) led task : led off[0m
+[0;32mI (684624) CTRL_TASK: Send LED ON[0m
+[0;32mI (684624) led task : led on[0m
+[0;32mI (686624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (686624) led task : led off[0m
+[0;32mI (688624) CTRL_TASK: Send LED ON[0m
+[0;32mI (688624) led task : led on[0m
+[0;32mI (690624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (690624) led task : led off[0m
+[0;32mI (692624) CTRL_TASK: Send LED ON[0m
+[0;32mI (692624) led task : led on[0m
+[0;32mI (694624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (694624) led task : led off[0m
+[0;32mI (696624) CTRL_TASK: Send LED ON[0m
+[0;32mI (696624) led task : led on[0m
+[0;32mI (698624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (698624) led task : led off[0m
+[0;32mI (700624) CTRL_TASK: Send LED ON[0m
+[0;32mI (700624) led task : led on[0m
+[0;32mI (702624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (702624) led task : led off[0m
+[0;32mI (704624) CTRL_TASK: Send LED ON[0m
+[0;32mI (704624) led task : led on[0m
+[0;32mI (706624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (706624) led task : led off[0m
+[0;32mI (708624) CTRL_TASK: Send LED ON[0m
+[0;32mI (708624) led task : led on[0m
+[0;32mI (710624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (710624) led task : led off[0m
+[0;32mI (712624) CTRL_TASK: Send LED ON[0m
+[0;32mI (712624) led task : led on[0m
+[0;32mI (714624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (714624) led task : led off[0m
+[0;32mI (716624) CTRL_TASK: Send LED ON[0m
+[0;32mI (716624) led task : led on[0m
+[0;32mI (718624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (718624) led task : led off[0m
+[0;32mI (720624) CTRL_TASK: Send LED ON[0m
+[0;32mI (720624) led task : led on[0m
+[0;32mI (722624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (722624) led task : led off[0m
+[0;32mI (724624) CTRL_TASK: Send LED ON[0m
+[0;32mI (724624) led task : led on[0m
+[0;32mI (726624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (726624) led task : led off[0m
+[0;32mI (728624) CTRL_TASK: Send LED ON[0m
+[0;32mI (728624) led task : led on[0m
+[0;32mI (730624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (730624) led task : led off[0m
+[0;32mI (732624) CTRL_TASK: Send LED ON[0m
+[0;32mI (732624) led task : led on[0m
+[0;32mI (734624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (734624) led task : led off[0m
+[0;32mI (736624) CTRL_TASK: Send LED ON[0m
+[0;32mI (736624) led task : led on[0m
+[0;32mI (738624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (738624) led task : led off[0m
+[0;32mI (740624) CTRL_TASK: Send LED ON[0m
+[0;32mI (740624) led task : led on[0m
+[0;32mI (742624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (742624) led task : led off[0m
+[0;32mI (744624) CTRL_TASK: Send LED ON[0m
+[0;32mI (744624) led task : led on[0m
+[0;32mI (746624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (746624) led task : led off[0m
+[0;32mI (748624) CTRL_TASK: Send LED ON[0m
+[0;32mI (748624) led task : led on[0m
+[0;32mI (750624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (750624) led task : led off[0m
+[0;32mI (752624) CTRL_TASK: Send LED ON[0m
+[0;32mI (752624) led task : led on[0m
+[0;32mI (754624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (754624) led task : led off[0m
+[0;32mI (756624) CTRL_TASK: Send LED ON[0m
+[0;32mI (756624) led task : led on[0m
+[0;32mI (758624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (758624) led task : led off[0m
+[0;32mI (760624) CTRL_TASK: Send LED ON[0m
+[0;32mI (760624) led task : led on[0m
+[0;32mI (762624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (762624) led task : led off[0m
+[0;32mI (764624) CTRL_TASK: Send LED ON[0m
+[0;32mI (764624) led task : led on[0m
+[0;32mI (766624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (766624) led task : led off[0m
+[0;32mI (768624) CTRL_TASK: Send LED ON[0m
+[0;32mI (768624) led task : led on[0m
+[0;32mI (770624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (770624) led task : led off[0m
+[0;32mI (772624) CTRL_TASK: Send LED ON[0m
+[0;32mI (772624) led task : led on[0m
+[0;32mI (774624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (774624) led task : led off[0m
+[0;32mI (776624) CTRL_TASK: Send LED ON[0m
+[0;32mI (776624) led task : led on[0m
+[0;32mI (778624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (778624) led task : led off[0m
+[0;32mI (780624) CTRL_TASK: Send LED ON[0m
+[0;32mI (780624) led task : led on[0m
+[0;32mI (782624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (782624) led task : led off[0m
+[0;32mI (784624) CTRL_TASK: Send LED ON[0m
+[0;32mI (784624) led task : led on[0m
+[0;32mI (786624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (786624) led task : led off[0m
+[0;32mI (788624) CTRL_TASK: Send LED ON[0m
+[0;32mI (788624) led task : led on[0m
+[0;32mI (790624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (790624) led task : led off[0m
+[0;32mI (792624) CTRL_TASK: Send LED ON[0m
+[0;32mI (792624) led task : led on[0m
+[0;32mI (794624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (794624) led task : led off[0m
+[0;32mI (796624) CTRL_TASK: Send LED ON[0m
+[0;32mI (796624) led task : led on[0m
+[0;32mI (798624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (798624) led task : led off[0m
+[0;32mI (800624) CTRL_TASK: Send LED ON[0m
+[0;32mI (800624) led task : led on[0m
+[0;32mI (802624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (802624) led task : led off[0m
+[0;32mI (804624) CTRL_TASK: Send LED ON[0m
+[0;32mI (804624) led task : led on[0m
+[0;32mI (806624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (806624) led task : led off[0m
+[0;32mI (808624) CTRL_TASK: Send LED ON[0m
+[0;32mI (808624) led task : led on[0m
+[0;32mI (810624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (810624) led task : led off[0m
+[0;32mI (812624) CTRL_TASK: Send LED ON[0m
+[0;32mI (812624) led task : led on[0m
+[0;32mI (814624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (814624) led task : led off[0m
+[0;32mI (816624) CTRL_TASK: Send LED ON[0m
+[0;32mI (816624) led task : led on[0m
+[0;32mI (818624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (818624) led task : led off[0m
+[0;32mI (820624) CTRL_TASK: Send LED ON[0m
+[0;32mI (820624) led task : led on[0m
+[0;32mI (822624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (822624) led task : led off[0m
+[0;32mI (824624) CTRL_TASK: Send LED ON[0m
+[0;32mI (824624) led task : led on[0m
+[0;32mI (826624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (826624) led task : led off[0m
+[0;32mI (828624) CTRL_TASK: Send LED ON[0m
+[0;32mI (828624) led task : led on[0m
+[0;32mI (830624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (830624) led task : led off[0m
+[0;32mI (832624) CTRL_TASK: Send LED ON[0m
+[0;32mI (832624) led task : led on[0m
+[0;32mI (834624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (834624) led task : led off[0m
+[0;32mI (836624) CTRL_TASK: Send LED ON[0m
+[0;32mI (836624) led task : led on[0m
+[0;32mI (838624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (838624) led task : led off[0m
+[0;32mI (840624) CTRL_TASK: Send LED ON[0m
+[0;32mI (840624) led task : led on[0m
+[0;32mI (842624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (842624) led task : led off[0m
+[0;32mI (844624) CTRL_TASK: Send LED ON[0m
+[0;32mI (844624) led task : led on[0m
+[0;32mI (846624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (846624) led task : led off[0m
+[0;32mI (848624) CTRL_TASK: Send LED ON[0m
+[0;32mI (848624) led task : led on[0m
+[0;32mI (850624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (850624) led task : led off[0m
+[0;32mI (852624) CTRL_TASK: Send LED ON[0m
+[0;32mI (852624) led task : led on[0m
+[0;32mI (854624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (854624) led task : led off[0m
+[0;32mI (856624) CTRL_TASK: Send LED ON[0m
+[0;32mI (856624) led task : led on[0m
+[0;32mI (858624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (858624) led task : led off[0m
+[0;32mI (860624) CTRL_TASK: Send LED ON[0m
+[0;32mI (860624) led task : led on[0m
+[0;32mI (862624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (862624) led task : led off[0m
+[0;32mI (864624) CTRL_TASK: Send LED ON[0m
+[0;32mI (864624) led task : led on[0m
+[0;32mI (866624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (866624) led task : led off[0m
+[0;32mI (868624) CTRL_TASK: Send LED ON[0m
+[0;32mI (868624) led task : led on[0m
+[0;32mI (870624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (870624) led task : led off[0m
+[0;32mI (872624) CTRL_TASK: Send LED ON[0m
+[0;32mI (872624) led task : led on[0m
+[0;32mI (874624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (874624) led task : led off[0m
+[0;32mI (876624) CTRL_TASK: Send LED ON[0m
+[0;32mI (876624) led task : led on[0m
+[0;32mI (878624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (878624) led task : led off[0m
+[0;32mI (880624) CTRL_TASK: Send LED ON[0m
+[0;32mI (880624) led task : led on[0m
+[0;32mI (882624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (882624) led task : led off[0m
+[0;32mI (884624) CTRL_TASK: Send LED ON[0m
+[0;32mI (884624) led task : led on[0m
+[0;32mI (886624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (886624) led task : led off[0m
+[0;32mI (888624) CTRL_TASK: Send LED ON[0m
+[0;32mI (888624) led task : led on[0m
+[0;32mI (890624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (890624) led task : led off[0m
+[0;32mI (892624) CTRL_TASK: Send LED ON[0m
+[0;32mI (892624) led task : led on[0m
+[0;32mI (894624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (894624) led task : led off[0m
+[0;32mI (896624) CTRL_TASK: Send LED ON[0m
+[0;32mI (896624) led task : led on[0m
+[0;32mI (898624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (898624) led task : led off[0m
+[0;32mI (900624) CTRL_TASK: Send LED ON[0m
+[0;32mI (900624) led task : led on[0m
+[0;32mI (902624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (902624) led task : led off[0m
+[0;32mI (904624) CTRL_TASK: Send LED ON[0m
+[0;32mI (904624) led task : led on[0m
+[0;32mI (906624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (906624) led task : led off[0m
+[0;32mI (908624) CTRL_TASK: Send LED ON[0m
+[0;32mI (908624) led task : led on[0m
+[0;32mI (910624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (910624) led task : led off[0m
+[0;32mI (912624) CTRL_TASK: Send LED ON[0m
+[0;32mI (912624) led task : led on[0m
+[0;32mI (914624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (914624) led task : led off[0m
+[0;32mI (916624) CTRL_TASK: Send LED ON[0m
+[0;32mI (916624) led task : led on[0m
+[0;32mI (918624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (918624) led task : led off[0m
+[0;32mI (920624) CTRL_TASK: Send LED ON[0m
+[0;32mI (920624) led task : led on[0m
+[0;32mI (922624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (922624) led task : led off[0m
+[0;32mI (924624) CTRL_TASK: Send LED ON[0m
+[0;32mI (924624) led task : led on[0m
+[0;32mI (926624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (926624) led task : led off[0m
+[0;32mI (928624) CTRL_TASK: Send LED ON[0m
+[0;32mI (928624) led task : led on[0m
+[0;32mI (930624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (930624) led task : led off[0m
+[0;32mI (932624) CTRL_TASK: Send LED ON[0m
+[0;32mI (932624) led task : led on[0m
+[0;32mI (934624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (934624) led task : led off[0m
+[0;32mI (936624) CTRL_TASK: Send LED ON[0m
+[0;32mI (936624) led task : led on[0m
+[0;32mI (938624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (938624) led task : led off[0m
+[0;32mI (940624) CTRL_TASK: Send LED ON[0m
+[0;32mI (940624) led task : led on[0m
+[0;32mI (942624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (942624) led task : led off[0m
+[0;32mI (944624) CTRL_TASK: Send LED ON[0m
+[0;32mI (944624) led task : led on[0m
+[0;32mI (946624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (946624) led task : led off[0m
+[0;32mI (948624) CTRL_TASK: Send LED ON[0m
+[0;32mI (948624) led task : led on[0m
+[0;32mI (950624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (950624) led task : led off[0m
+[0;32mI (952624) CTRL_TASK: Send LED ON[0m
+[0;32mI (952624) led task : led on[0m
+[0;32mI (954624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (954624) led task : led off[0m
+[0;32mI (956624) CTRL_TASK: Send LED ON[0m
+[0;32mI (956624) led task : led on[0m
+[0;32mI (958624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (958624) led task : led off[0m
+[0;32mI (960624) CTRL_TASK: Send LED ON[0m
+[0;32mI (960624) led task : led on[0m
+[0;32mI (962624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (962624) led task : led off[0m
+[0;32mI (964624) CTRL_TASK: Send LED ON[0m
+[0;32mI (964624) led task : led on[0m
+[0;32mI (966624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (966624) led task : led off[0m
+[0;32mI (968624) CTRL_TASK: Send LED ON[0m
+[0;32mI (968624) led task : led on[0m
+[0;32mI (970624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (970624) led task : led off[0m
+[0;32mI (972624) CTRL_TASK: Send LED ON[0m
+[0;32mI (972624) led task : led on[0m
+[0;32mI (974624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (974624) led task : led off[0m
+[0;32mI (976624) CTRL_TASK: Send LED ON[0m
+[0;32mI (976624) led task : led on[0m
+[0;32mI (978624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (978624) led task : led off[0m
+[0;32mI (980624) CTRL_TASK: Send LED ON[0m
+[0;32mI (980624) led task : led on[0m
+[0;32mI (982624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (982624) led task : led off[0m
+[0;32mI (984624) CTRL_TASK: Send LED ON[0m
+[0;32mI (984624) led task : led on[0m
+[0;32mI (986624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (986624) led task : led off[0m
+[0;32mI (988624) CTRL_TASK: Send LED ON[0m
+[0;32mI (988624) led task : led on[0m
+[0;32mI (990624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (990624) led task : led off[0m
+[0;32mI (992624) CTRL_TASK: Send LED ON[0m
+[0;32mI (992624) led task : led on[0m
+[0;32mI (994624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (994624) led task : led off[0m
+[0;32mI (996624) CTRL_TASK: Send LED ON[0m
+[0;32mI (996624) led task : led on[0m
+[0;32mI (998624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (998624) led task : led off[0m
+[0;32mI (1000624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1000624) led task : led on[0m
+[0;32mI (1002624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1002624) led task : led off[0m
+[0;32mI (1004624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1004624) led task : led on[0m
+[0;32mI (1006624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1006624) led task : led off[0m
+[0;32mI (1008624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1008624) led task : led on[0m
+[0;32mI (1010624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1010624) led task : led off[0m
+[0;32mI (1012624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1012624) led task : led on[0m
+[0;32mI (1014624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1014624) led task : led off[0m
+[0;32mI (1016624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1016624) led task : led on[0m
+[0;32mI (1018624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1018624) led task : led off[0m
+[0;32mI (1020624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1020624) led task : led on[0m
+[0;32mI (1022624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1022624) led task : led off[0m
+[0;32mI (1024624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1024624) led task : led on[0m
+[0;32mI (1026624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1026624) led task : led off[0m
+[0;32mI (1028624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1028624) led task : led on[0m
+[0;32mI (1030624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1030624) led task : led off[0m
+[0;32mI (1032624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1032624) led task : led on[0m
+[0;32mI (1034624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1034624) led task : led off[0m
+[0;32mI (1036624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1036624) led task : led on[0m
+[0;32mI (1038624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1038624) led task : led off[0m
+[0;32mI (1040624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1040624) led task : led on[0m
+[0;32mI (1042624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1042624) led task : led off[0m
+[0;32mI (1044624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1044624) led task : led on[0m
+[0;32mI (1046624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1046624) led task : led off[0m
+[0;32mI (1048624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1048624) led task : led on[0m
+[0;32mI (1050624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1050624) led task : led off[0m
+[0;32mI (1052624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1052624) led task : led on[0m
+[0;32mI (1054624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1054624) led task : led off[0m
+[0;32mI (1056624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1056624) led task : led on[0m
+[0;32mI (1058624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1058624) led task : led off[0m
+[0;32mI (1060624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1060624) led task : led on[0m
+[0;32mI (1062624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1062624) led task : led off[0m
+[0;32mI (1064624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1064624) led task : led on[0m
+[0;32mI (1066624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1066624) led task : led off[0m
+[0;32mI (1068624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1068624) led task : led on[0m
+[0;32mI (1070624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1070624) led task : led off[0m
+[0;32mI (1072624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1072624) led task : led on[0m
+[0;32mI (1074624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1074624) led task : led off[0m
+[0;32mI (1076624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1076624) led task : led on[0m
+[0;32mI (1078624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1078624) led task : led off[0m
+[0;32mI (1080624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1080624) led task : led on[0m
+[0;32mI (1082624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1082624) led task : led off[0m
+[0;32mI (1084624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1084624) led task : led on[0m
+[0;32mI (1086624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1086624) led task : led off[0m
+[0;32mI (1088624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1088624) led task : led on[0m
+[0;32mI (1090624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1090624) led task : led off[0m
+[0;32mI (1092624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1092624) led task : led on[0m
+[0;32mI (1094624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1094624) led task : led off[0m
+[0;32mI (1096624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1096624) led task : led on[0m
+[0;32mI (1098624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1098624) led task : led off[0m
+[0;32mI (1100624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1100624) led task : led on[0m
+[0;32mI (1102624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1102624) led task : led off[0m
+[0;32mI (1104624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1104624) led task : led on[0m
+[0;32mI (1106624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1106624) led task : led off[0m
+[0;32mI (1108624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1108624) led task : led on[0m
+[0;32mI (1110624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1110624) led task : led off[0m
+[0;32mI (1112624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1112624) led task : led on[0m
+[0;32mI (1114624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1114624) led task : led off[0m
+[0;32mI (1116624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1116624) led task : led on[0m
+[0;32mI (1118624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1118624) led task : led off[0m
+[0;32mI (1120624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1120624) led task : led on[0m
+[0;32mI (1122624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1122624) led task : led off[0m
+[0;32mI (1124624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1124624) led task : led on[0m
+[0;32mI (1126624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1126624) led task : led off[0m
+[0;32mI (1128624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1128624) led task : led on[0m
+[0;32mI (1130624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1130624) led task : led off[0m
+[0;32mI (1132624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1132624) led task : led on[0m
+[0;32mI (1134624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1134624) led task : led off[0m
+[0;32mI (1136624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1136624) led task : led on[0m
+[0;32mI (1138624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1138624) led task : led off[0m
+[0;32mI (1140624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1140624) led task : led on[0m
+[0;32mI (1142624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1142624) led task : led off[0m
+[0;32mI (1144624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1144624) led task : led on[0m
+[0;32mI (1146624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1146624) led task : led off[0m
+[0;32mI (1148624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1148624) led task : led on[0m
+[0;32mI (1150624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1150624) led task : led off[0m
+[0;32mI (1152624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1152624) led task : led on[0m
+[0;32mI (1154624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1154624) led task : led off[0m
+[0;32mI (1156624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1156624) led task : led on[0m
+[0;32mI (1158624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1158624) led task : led off[0m
+[0;32mI (1160624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1160624) led task : led on[0m
+[0;32mI (1162624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1162624) led task : led off[0m
+[0;32mI (1164624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1164624) led task : led on[0m
+[0;32mI (1166624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1166624) led task : led off[0m
+[0;32mI (1168624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1168624) led task : led on[0m
+[0;32mI (1170624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1170624) led task : led off[0m
+[0;32mI (1172624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1172624) led task : led on[0m
+[0;32mI (1174624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1174624) led task : led off[0m
+[0;32mI (1176624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1176624) led task : led on[0m
+[0;32mI (1178624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1178624) led task : led off[0m
+[0;32mI (1180624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1180624) led task : led on[0m
+[0;32mI (1182624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1182624) led task : led off[0m
+[0;32mI (1184624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1184624) led task : led on[0m
+[0;32mI (1186624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1186624) led task : led off[0m
+[0;32mI (1188624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1188624) led task : led on[0m
+[0;32mI (1190624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1190624) led task : led off[0m
+[0;32mI (1192624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1192624) led task : led on[0m
+[0;32mI (1194624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1194624) led task : led off[0m
+[0;32mI (1196624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1196624) led task : led on[0m
+[0;32mI (1198624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1198624) led task : led off[0m
+[0;32mI (1200624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1200624) led task : led on[0m
+[0;32mI (1202624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1202624) led task : led off[0m
+[0;32mI (1204624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1204624) led task : led on[0m
+[0;32mI (1206624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1206624) led task : led off[0m
+[0;32mI (1208624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1208624) led task : led on[0m
+[0;32mI (1210624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1210624) led task : led off[0m
+[0;32mI (1212624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1212624) led task : led on[0m
+[0;32mI (1214624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1214624) led task : led off[0m
+[0;32mI (1216624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1216624) led task : led on[0m
+[0;32mI (1218624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1218624) led task : led off[0m
+[0;32mI (1220624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1220624) led task : led on[0m
+[0;32mI (1222624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1222624) led task : led off[0m
+[0;32mI (1224624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1224624) led task : led on[0m
+[0;32mI (1226624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1226624) led task : led off[0m
+[0;32mI (1228624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1228624) led task : led on[0m
+[0;32mI (1230624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1230624) led task : led off[0m
+[0;32mI (1232624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1232624) led task : led on[0m
+[0;32mI (1234624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1234624) led task : led off[0m
+[0;32mI (1236624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1236624) led task : led on[0m
+[0;32mI (1238624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1238624) led task : led off[0m
+[0;32mI (1240624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1240624) led task : led on[0m
+[0;32mI (1242624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1242624) led task : led off[0m
+[0;32mI (1244624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1244624) led task : led on[0m
+[0;32mI (1246624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1246624) led task : led off[0m
+[0;32mI (1248624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1248624) led task : led on[0m
+[0;32mI (1250624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1250624) led task : led off[0m
+[0;32mI (1252624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1252624) led task : led on[0m
+[0;32mI (1254624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1254624) led task : led off[0m
+[0;32mI (1256624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1256624) led task : led on[0m
+[0;32mI (1258624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1258624) led task : led off[0m
+[0;32mI (1260624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1260624) led task : led on[0m
+[0;32mI (1262624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1262624) led task : led off[0m
+[0;32mI (1264624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1264624) led task : led on[0m
+[0;32mI (1266624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1266624) led task : led off[0m
+[0;32mI (1268624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1268624) led task : led on[0m
+[0;32mI (1270624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1270624) led task : led off[0m
+[0;32mI (1272624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1272624) led task : led on[0m
+[0;32mI (1274624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1274624) led task : led off[0m
+[0;32mI (1276624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1276624) led task : led on[0m
+[0;32mI (1278624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1278624) led task : led off[0m
+[0;32mI (1280624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1280624) led task : led on[0m
+[0;32mI (1282624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1282624) led task : led off[0m
+[0;32mI (1284624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1284624) led task : led on[0m
+[0;32mI (1286624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1286624) led task : led off[0m
+[0;32mI (1288624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1288624) led task : led on[0m
+[0;32mI (1290624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1290624) led task : led off[0m
+[0;32mI (1292624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1292624) led task : led on[0m
+[0;32mI (1294624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1294624) led task : led off[0m
+[0;32mI (1296624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1296624) led task : led on[0m
+[0;32mI (1298624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1298624) led task : led off[0m
+[0;32mI (1300624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1300624) led task : led on[0m
+[0;32mI (1302624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1302624) led task : led off[0m
+[0;32mI (1304624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1304624) led task : led on[0m
+[0;32mI (1306624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1306624) led task : led off[0m
+[0;32mI (1308624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1308624) led task : led on[0m
+[0;32mI (1310624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1310624) led task : led off[0m
+[0;32mI (1312624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1312624) led task : led on[0m
+[0;32mI (1314624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1314624) led task : led off[0m
+[0;32mI (1316624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1316624) led task : led on[0m
+[0;32mI (1318624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1318624) led task : led off[0m
+[0;32mI (1320624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1320624) led task : led on[0m
+[0;32mI (1322624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1322624) led task : led off[0m
+[0;32mI (1324624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1324624) led task : led on[0m
+[0;32mI (1326624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1326624) led task : led off[0m
+[0;32mI (1328624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1328624) led task : led on[0m
+[0;32mI (1330624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1330624) led task : led off[0m
+[0;32mI (1332624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1332624) led task : led on[0m
+[0;32mI (1334624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1334624) led task : led off[0m
+[0;32mI (1336624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1336624) led task : led on[0m
+[0;32mI (1338624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1338624) led task : led off[0m
+[0;32mI (1340624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1340624) led task : led on[0m
+[0;32mI (1342624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1342624) led task : led off[0m
+[0;32mI (1344624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1344624) led task : led on[0m
+[0;32mI (1346624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1346624) led task : led off[0m
+[0;32mI (1348624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1348624) led task : led on[0m
+[0;32mI (1350624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1350624) led task : led off[0m
+[0;32mI (1352624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1352624) led task : led on[0m
+[0;32mI (1354624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1354624) led task : led off[0m
+[0;32mI (1356624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1356624) led task : led on[0m
+[0;32mI (1358624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1358624) led task : led off[0m
+[0;32mI (1360624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1360624) led task : led on[0m
+[0;32mI (1362624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1362624) led task : led off[0m
+[0;32mI (1364624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1364624) led task : led on[0m
+[0;32mI (1366624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1366624) led task : led off[0m
+[0;32mI (1368624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1368624) led task : led on[0m
+[0;32mI (1370624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1370624) led task : led off[0m
+[0;32mI (1372624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1372624) led task : led on[0m
+[0;32mI (1374624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1374624) led task : led off[0m
+[0;32mI (1376624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1376624) led task : led on[0m
+[0;32mI (1378624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1378624) led task : led off[0m
+[0;32mI (1380624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1380624) led task : led on[0m
+[0;32mI (1382624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1382624) led task : led off[0m
+[0;32mI (1384624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1384624) led task : led on[0m
+[0;32mI (1386624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1386624) led task : led off[0m
+[0;32mI (1388624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1388624) led task : led on[0m
+[0;32mI (1390624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1390624) led task : led off[0m
+[0;32mI (1392624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1392624) led task : led on[0m
+[0;32mI (1394624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1394624) led task : led off[0m
+[0;32mI (1396624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1396624) led task : led on[0m
+[0;32mI (1398624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1398624) led task : led off[0m
+[0;32mI (1400624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1400624) led task : led on[0m
+[0;32mI (1402624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1402624) led task : led off[0m
+[0;32mI (1404624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1404624) led task : led on[0m
+[0;32mI (1406624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1406624) led task : led off[0m
+[0;32mI (1408624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1408624) led task : led on[0m
+[0;32mI (1410624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1410624) led task : led off[0m
+[0;32mI (1412624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1412624) led task : led on[0m
+[0;32mI (1414624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1414624) led task : led off[0m
+[0;32mI (1416624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1416624) led task : led on[0m
+[0;32mI (1418624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1418624) led task : led off[0m
+[0;32mI (1420624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1420624) led task : led on[0m
+[0;32mI (1422624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1422624) led task : led off[0m
+[0;32mI (1424624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1424624) led task : led on[0m
+[0;32mI (1426624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1426624) led task : led off[0m
+[0;32mI (1428624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1428624) led task : led on[0m
+[0;32mI (1430624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1430624) led task : led off[0m
+[0;32mI (1432624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1432624) led task : led on[0m
+[0;32mI (1434624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1434624) led task : led off[0m
+[0;32mI (1436624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1436624) led task : led on[0m
+[0;32mI (1438624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1438624) led task : led off[0m
+[0;32mI (1440624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1440624) led task : led on[0m
+[0;32mI (1442624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1442624) led task : led off[0m
+[0;32mI (1444624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1444624) led task : led on[0m
+[0;32mI (1446624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1446624) led task : led off[0m
+[0;32mI (1448624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1448624) led task : led on[0m
+[0;32mI (1450624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1450624) led task : led off[0m
+[0;32mI (1452624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1452624) led task : led on[0m
+[0;32mI (1454624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1454624) led task : led off[0m
+[0;32mI (1456624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1456624) led task : led on[0m
+[0;32mI (1458624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1458624) led task : led off[0m
+[0;32mI (1460624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1460624) led task : led on[0m
+[0;32mI (1462624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1462624) led task : led off[0m
+[0;32mI (1464624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1464624) led task : led on[0m
+[0;32mI (1466624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1466624) led task : led off[0m
+[0;32mI (1468624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1468624) led task : led on[0m
+[0;32mI (1470624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1470624) led task : led off[0m
+[0;32mI (1472624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1472624) led task : led on[0m
+[0;32mI (1474624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1474624) led task : led off[0m
+[0;32mI (1476624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1476624) led task : led on[0m
+[0;32mI (1478624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1478624) led task : led off[0m
+[0;32mI (1480624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1480624) led task : led on[0m
+[0;32mI (1482624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1482624) led task : led off[0m
+[0;32mI (1484624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1484624) led task : led on[0m
+[0;32mI (1486624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1486624) led task : led off[0m
+[0;32mI (1488624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1488624) led task : led on[0m
+[0;32mI (1490624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1490624) led task : led off[0m
+[0;32mI (1492624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1492624) led task : led on[0m
+[0;32mI (1494624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1494624) led task : led off[0m
+[0;32mI (1496624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1496624) led task : led on[0m
+[0;32mI (1498624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1498624) led task : led off[0m
+[0;32mI (1500624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1500624) led task : led on[0m
+[0;32mI (1502624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1502624) led task : led off[0m
+[0;32mI (1504624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1504624) led task : led on[0m
+[0;32mI (1506624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1506624) led task : led off[0m
+[0;32mI (1508624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1508624) led task : led on[0m
+[0;32mI (1510624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1510624) led task : led off[0m
+[0;32mI (1512624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1512624) led task : led on[0m
+[0;32mI (1514624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1514624) led task : led off[0m
+[0;32mI (1516624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1516624) led task : led on[0m
+[0;32mI (1518624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1518624) led task : led off[0m
+[0;32mI (1520624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1520624) led task : led on[0m
+[0;32mI (1522624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1522624) led task : led off[0m
+[0;32mI (1524624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1524624) led task : led on[0m
+[0;32mI (1526624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1526624) led task : led off[0m
+[0;32mI (1528624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1528624) led task : led on[0m
+[0;32mI (1530624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1530624) led task : led off[0m
+[0;32mI (1532624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1532624) led task : led on[0m
+[0;32mI (1534624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1534624) led task : led off[0m
+[0;32mI (1536624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1536624) led task : led on[0m
+[0;32mI (1538624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1538624) led task : led off[0m
+[0;32mI (1540624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1540624) led task : led on[0m
+[0;32mI (1542624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1542624) led task : led off[0m
+[0;32mI (1544624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1544624) led task : led on[0m
+[0;32mI (1546624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1546624) led task : led off[0m
+[0;32mI (1548624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1548624) led task : led on[0m
+[0;32mI (1550624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1550624) led task : led off[0m
+[0;32mI (1552624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1552624) led task : led on[0m
+[0;32mI (1554624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1554624) led task : led off[0m
+[0;32mI (1556624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1556624) led task : led on[0m
+[0;32mI (1558624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1558624) led task : led off[0m
+[0;32mI (1560624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1560624) led task : led on[0m
+[0;32mI (1562624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1562624) led task : led off[0m
+[0;32mI (1564624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1564624) led task : led on[0m
+[0;32mI (1566624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1566624) led task : led off[0m
+[0;32mI (1568624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1568624) led task : led on[0m
+[0;32mI (1570624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1570624) led task : led off[0m
+[0;32mI (1572624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1572624) led task : led on[0m
+[0;32mI (1574624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1574624) led task : led off[0m
+[0;32mI (1576624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1576624) led task : led on[0m
+[0;32mI (1578624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1578624) led task : led off[0m
+[0;32mI (1580624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1580624) led task : led on[0m
+[0;32mI (1582624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1582624) led task : led off[0m
+[0;32mI (1584624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1584624) led task : led on[0m
+[0;32mI (1586624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1586624) led task : led off[0m
+[0;32mI (1588624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1588624) led task : led on[0m
+[0;32mI (1590624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1590624) led task : led off[0m
+[0;32mI (1592624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1592624) led task : led on[0m
+[0;32mI (1594624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1594624) led task : led off[0m
+[0;32mI (1596624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1596624) led task : led on[0m
+[0;32mI (1598624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1598624) led task : led off[0m
+[0;32mI (1600624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1600624) led task : led on[0m
+[0;32mI (1602624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1602624) led task : led off[0m
+[0;32mI (1604624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1604624) led task : led on[0m
+[0;32mI (1606624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1606624) led task : led off[0m
+[0;32mI (1608624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1608624) led task : led on[0m
+[0;32mI (1610624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1610624) led task : led off[0m
+[0;32mI (1612624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1612624) led task : led on[0m
+[0;32mI (1614624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1614624) led task : led off[0m
+[0;32mI (1616624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1616624) led task : led on[0m
+[0;32mI (1618624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1618624) led task : led off[0m
+[0;32mI (1620624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1620624) led task : led on[0m
+[0;32mI (1622624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1622624) led task : led off[0m
+[0;32mI (1624624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1624624) led task : led on[0m
+[0;32mI (1626624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1626624) led task : led off[0m
+[0;32mI (1628624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1628624) led task : led on[0m
+[0;32mI (1630624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1630624) led task : led off[0m
+[0;32mI (1632624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1632624) led task : led on[0m
+[0;32mI (1634624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1634624) led task : led off[0m
+[0;32mI (1636624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1636624) led task : led on[0m
+[0;32mI (1638624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1638624) led task : led off[0m
+[0;32mI (1640624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1640624) led task : led on[0m
+[0;32mI (1642624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1642624) led task : led off[0m
+[0;32mI (1644624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1644624) led task : led on[0m
+[0;32mI (1646624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1646624) led task : led off[0m
+[0;32mI (1648624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1648624) led task : led on[0m
+[0;32mI (1650624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1650624) led task : led off[0m
+[0;32mI (1652624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1652624) led task : led on[0m
+[0;32mI (1654624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1654624) led task : led off[0m
+[0;32mI (1656624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1656624) led task : led on[0m
+[0;32mI (1658624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1658624) led task : led off[0m
+[0;32mI (1660624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1660624) led task : led on[0m
+[0;32mI (1662624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1662624) led task : led off[0m
+[0;32mI (1664624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1664624) led task : led on[0m
+[0;32mI (1666624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1666624) led task : led off[0m
+[0;32mI (1668624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1668624) led task : led on[0m
+[0;32mI (1670624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1670624) led task : led off[0m
+[0;32mI (1672624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1672624) led task : led on[0m
+[0;32mI (1674624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1674624) led task : led off[0m
+[0;32mI (1676624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1676624) led task : led on[0m
+[0;32mI (1678624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1678624) led task : led off[0m
+[0;32mI (1680624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1680624) led task : led on[0m
+[0;32mI (1682624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1682624) led task : led off[0m
+[0;32mI (1684624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1684624) led task : led on[0m
+[0;32mI (1686624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1686624) led task : led off[0m
+[0;32mI (1688624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1688624) led task : led on[0m
+[0;32mI (1690624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1690624) led task : led off[0m
+[0;32mI (1692624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1692624) led task : led on[0m
+[0;32mI (1694624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1694624) led task : led off[0m
+[0;32mI (1696624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1696624) led task : led on[0m
+[0;32mI (1698624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1698624) led task : led off[0m
+[0;32mI (1700624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1700624) led task : led on[0m
+[0;32mI (1702624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1702624) led task : led off[0m
+[0;32mI (1704624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1704624) led task : led on[0m
+[0;32mI (1706624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1706624) led task : led off[0m
+[0;32mI (1708624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1708624) led task : led on[0m
+[0;32mI (1710624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1710624) led task : led off[0m
+[0;32mI (1712624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1712624) led task : led on[0m
+[0;32mI (1714624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1714624) led task : led off[0m
+[0;32mI (1716624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1716624) led task : led on[0m
+[0;32mI (1718624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1718624) led task : led off[0m
+[0;32mI (1720624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1720624) led task : led on[0m
+[0;32mI (1722624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1722624) led task : led off[0m
+[0;32mI (1724624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1724624) led task : led on[0m
+[0;32mI (1726624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1726624) led task : led off[0m
+[0;32mI (1728624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1728624) led task : led on[0m
+[0;32mI (1730624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1730624) led task : led off[0m
+[0;32mI (1732624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1732624) led task : led on[0m
+[0;32mI (1734624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1734624) led task : led off[0m
+[0;32mI (1736624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1736624) led task : led on[0m
+[0;32mI (1738624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1738624) led task : led off[0m
+[0;32mI (1740624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1740624) led task : led on[0m
+[0;32mI (1742624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1742624) led task : led off[0m
+[0;32mI (1744624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1744624) led task : led on[0m
+[0;32mI (1746624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1746624) led task : led off[0m
+[0;32mI (1748624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1748624) led task : led on[0m
+[0;32mI (1750624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1750624) led task : led off[0m
+[0;32mI (1752624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1752624) led task : led on[0m
+[0;32mI (1754624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1754624) led task : led off[0m
+[0;32mI (1756624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1756624) led task : led on[0m
+[0;32mI (1758624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1758624) led task : led off[0m
+[0;32mI (1760624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1760624) led task : led on[0m
+[0;32mI (1762624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1762624) led task : led off[0m
+[0;32mI (1764624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1764624) led task : led on[0m
+[0;32mI (1766624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1766624) led task : led off[0m
+[0;32mI (1768624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1768624) led task : led on[0m
+[0;32mI (1770624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1770624) led task : led off[0m
+[0;32mI (1772624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1772624) led task : led on[0m
+[0;32mI (1774624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1774624) led task : led off[0m
+[0;32mI (1776624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1776624) led task : led on[0m
+[0;32mI (1778624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1778624) led task : led off[0m
+[0;32mI (1780624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1780624) led task : led on[0m
+[0;32mI (1782624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1782624) led task : led off[0m
+[0;32mI (1784624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1784624) led task : led on[0m
+[0;32mI (1786624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1786624) led task : led off[0m
+[0;32mI (1788624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1788624) led task : led on[0m
+[0;32mI (1790624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1790624) led task : led off[0m
+[0;32mI (1792624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1792624) led task : led on[0m
+[0;32mI (1794624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1794624) led task : led off[0m
+[0;32mI (1796624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1796624) led task : led on[0m
+[0;32mI (1798624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1798624) led task : led off[0m
+[0;32mI (1800624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1800624) led task : led on[0m
+[0;32mI (1802624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1802624) led task : led off[0m
+[0;32mI (1804624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1804624) led task : led on[0m
+[0;32mI (1806624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1806624) led task : led off[0m
+[0;32mI (1808624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1808624) led task : led on[0m
+[0;32mI (1810624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1810624) led task : led off[0m
+[0;32mI (1812624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1812624) led task : led on[0m
+[0;32mI (1814624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1814624) led task : led off[0m
+[0;32mI (1816624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1816624) led task : led on[0m
+[0;32mI (1818624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1818624) led task : led off[0m
+[0;32mI (1820624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1820624) led task : led on[0m
+[0;32mI (1822624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1822624) led task : led off[0m
+[0;32mI (1824624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1824624) led task : led on[0m
+[0;32mI (1826624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1826624) led task : led off[0m
+[0;32mI (1828624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1828624) led task : led on[0m
+[0;32mI (1830624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1830624) led task : led off[0m
+[0;32mI (1832624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1832624) led task : led on[0m
+[0;32mI (1834624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1834624) led task : led off[0m
+[0;32mI (1836624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1836624) led task : led on[0m
+[0;32mI (1838624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1838624) led task : led off[0m
+[0;32mI (1840624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1840624) led task : led on[0m
+[0;32mI (1842624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1842624) led task : led off[0m
+[0;32mI (1844624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1844624) led task : led on[0m
+[0;32mI (1846624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1846624) led task : led off[0m
+[0;32mI (1848624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1848624) led task : led on[0m
+[0;32mI (1850624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1850624) led task : led off[0m
+[0;32mI (1852624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1852624) led task : led on[0m
+[0;32mI (1854624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1854624) led task : led off[0m
+[0;32mI (1856624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1856624) led task : led on[0m
+[0;32mI (1858624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1858624) led task : led off[0m
+[0;32mI (1860624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1860624) led task : led on[0m
+[0;32mI (1862624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1862624) led task : led off[0m
+[0;32mI (1864624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1864624) led task : led on[0m
+[0;32mI (1866624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1866624) led task : led off[0m
+[0;32mI (1868624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1868624) led task : led on[0m
+[0;32mI (1870624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1870624) led task : led off[0m
+[0;32mI (1872624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1872624) led task : led on[0m
+[0;32mI (1874624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1874624) led task : led off[0m
+[0;32mI (1876624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1876624) led task : led on[0m
+[0;32mI (1878624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1878624) led task : led off[0m
+[0;32mI (1880624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1880624) led task : led on[0m
+[0;32mI (1882624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1882624) led task : led off[0m
+[0;32mI (1884624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1884624) led task : led on[0m
+[0;32mI (1886624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1886624) led task : led off[0m
+[0;32mI (1888624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1888624) led task : led on[0m
+[0;32mI (1890624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1890624) led task : led off[0m
+[0;32mI (1892624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1892624) led task : led on[0m
+[0;32mI (1894624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1894624) led task : led off[0m
+[0;32mI (1896624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1896624) led task : led on[0m
+[0;32mI (1898624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1898624) led task : led off[0m
+[0;32mI (1900624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1900624) led task : led on[0m
+[0;32mI (1902624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1902624) led task : led off[0m
+[0;32mI (1904624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1904624) led task : led on[0m
+[0;32mI (1906624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1906624) led task : led off[0m
+[0;32mI (1908624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1908624) led task : led on[0m
+[0;32mI (1910624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1910624) led task : led off[0m
+[0;32mI (1912624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1912624) led task : led on[0m
+[0;32mI (1914624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1914624) led task : led off[0m
+[0;32mI (1916624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1916624) led task : led on[0m
+[0;32mI (1918624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1918624) led task : led off[0m
+[0;32mI (1920624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1920624) led task : led on[0m
+[0;32mI (1922624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1922624) led task : led off[0m
+[0;32mI (1924624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1924624) led task : led on[0m
+[0;32mI (1926624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1926624) led task : led off[0m
+[0;32mI (1928624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1928624) led task : led on[0m
+[0;32mI (1930624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1930624) led task : led off[0m
+[0;32mI (1932624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1932624) led task : led on[0m
+[0;32mI (1934624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1934624) led task : led off[0m
+[0;32mI (1936624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1936624) led task : led on[0m
+[0;32mI (1938624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1938624) led task : led off[0m
+[0;32mI (1940624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1940624) led task : led on[0m
+[0;32mI (1942624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1942624) led task : led off[0m
+[0;32mI (1944624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1944624) led task : led on[0m
+[0;32mI (1946624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1946624) led task : led off[0m
+[0;32mI (1948624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1948624) led task : led on[0m
+[0;32mI (1950624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1950624) led task : led off[0m
+[0;32mI (1952624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1952624) led task : led on[0m
+[0;32mI (1954624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1954624) led task : led off[0m
+[0;32mI (1956624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1956624) led task : led on[0m
+[0;32mI (1958624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1958624) led task : led off[0m
+[0;32mI (1960624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1960624) led task : led on[0m
+[0;32mI (1962624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1962624) led task : led off[0m
+[0;32mI (1964624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1964624) led task : led on[0m
+[0;32mI (1966624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1966624) led task : led off[0m
+[0;32mI (1968624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1968624) led task : led on[0m
+[0;32mI (1970624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1970624) led task : led off[0m
+[0;32mI (1972624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1972624) led task : led on[0m
+[0;32mI (1974624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1974624) led task : led off[0m
+[0;32mI (1976624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1976624) led task : led on[0m
+[0;32mI (1978624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1978624) led task : led off[0m
+[0;32mI (1980624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1980624) led task : led on[0m
+[0;32mI (1982624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1982624) led task : led off[0m
+[0;32mI (1984624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1984624) led task : led on[0m
+[0;32mI (1986624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1986624) led task : led off[0m
+[0;32mI (1988624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1988624) led task : led on[0m
+[0;32mI (1990624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1990624) led task : led off[0m
+[0;32mI (1992624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1992624) led task : led on[0m
+[0;32mI (1994624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1994624) led task : led off[0m
+[0;32mI (1996624) CTRL_TASK: Send LED ON[0m
+[0;32mI (1996624) led task : led on[0m
+[0;32mI (1998624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (1998624) led task : led off[0m
+[0;32mI (2000624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2000624) led task : led on[0m
+[0;32mI (2002624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2002624) led task : led off[0m
+[0;32mI (2004624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2004624) led task : led on[0m
+[0;32mI (2006624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2006624) led task : led off[0m
+[0;32mI (2008624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2008624) led task : led on[0m
+[0;32mI (2010624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2010624) led task : led off[0m
+[0;32mI (2012624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2012624) led task : led on[0m
+[0;32mI (2014624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2014624) led task : led off[0m
+[0;32mI (2016624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2016624) led task : led on[0m
+[0;32mI (2018624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2018624) led task : led off[0m
+[0;32mI (2020624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2020624) led task : led on[0m
+[0;32mI (2022624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2022624) led task : led off[0m
+[0;32mI (2024624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2024624) led task : led on[0m
+[0;32mI (2026624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2026624) led task : led off[0m
+[0;32mI (2028624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2028624) led task : led on[0m
+[0;32mI (2030624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2030624) led task : led off[0m
+[0;32mI (2032624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2032624) led task : led on[0m
+[0;32mI (2034624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2034624) led task : led off[0m
+[0;32mI (2036624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2036624) led task : led on[0m
+[0;32mI (2038624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2038624) led task : led off[0m
+[0;32mI (2040624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2040624) led task : led on[0m
+[0;32mI (2042624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2042624) led task : led off[0m
+[0;32mI (2044624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2044624) led task : led on[0m
+[0;32mI (2046624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2046624) led task : led off[0m
+[0;32mI (2048624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2048624) led task : led on[0m
+[0;32mI (2050624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2050624) led task : led off[0m
+[0;32mI (2052624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2052624) led task : led on[0m
+[0;32mI (2054624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2054624) led task : led off[0m
+[0;32mI (2056624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2056624) led task : led on[0m
+[0;32mI (2058624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2058624) led task : led off[0m
+[0;32mI (2060624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2060624) led task : led on[0m
+[0;32mI (2062624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2062624) led task : led off[0m
+[0;32mI (2064624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2064624) led task : led on[0m
+[0;32mI (2066624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2066624) led task : led off[0m
+[0;32mI (2068624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2068624) led task : led on[0m
+[0;32mI (2070624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2070624) led task : led off[0m
+[0;32mI (2072624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2072624) led task : led on[0m
+[0;32mI (2074624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2074624) led task : led off[0m
+[0;32mI (2076624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2076624) led task : led on[0m
+[0;32mI (2078624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2078624) led task : led off[0m
+[0;32mI (2080624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2080624) led task : led on[0m
+[0;32mI (2082624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2082624) led task : led off[0m
+[0;32mI (2084624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2084624) led task : led on[0m
+[0;32mI (2086624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2086624) led task : led off[0m
+[0;32mI (2088624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2088624) led task : led on[0m
+[0;32mI (2090624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2090624) led task : led off[0m
+[0;32mI (2092624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2092624) led task : led on[0m
+[0;32mI (2094624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2094624) led task : led off[0m
+[0;32mI (2096624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2096624) led task : led on[0m
+[0;32mI (2098624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2098624) led task : led off[0m
+[0;32mI (2100624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2100624) led task : led on[0m
+[0;32mI (2102624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2102624) led task : led off[0m
+[0;32mI (2104624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2104624) led task : led on[0m
+[0;32mI (2106624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2106624) led task : led off[0m
+[0;32mI (2108624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2108624) led task : led on[0m
+[0;32mI (2110624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2110624) led task : led off[0m
+[0;32mI (2112624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2112624) led task : led on[0m
+[0;32mI (2114624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2114624) led task : led off[0m
+[0;32mI (2116624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2116624) led task : led on[0m
+[0;32mI (2118624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2118624) led task : led off[0m
+[0;32mI (2120624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2120624) led task : led on[0m
+[0;32mI (2122624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2122624) led task : led off[0m
+[0;32mI (2124624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2124624) led task : led on[0m
+[0;32mI (2126624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2126624) led task : led off[0m
+[0;32mI (2128624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2128624) led task : led on[0m
+[0;32mI (2130624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2130624) led task : led off[0m
+[0;32mI (2132624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2132624) led task : led on[0m
+[0;32mI (2134624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2134624) led task : led off[0m
+[0;32mI (2136624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2136624) led task : led on[0m
+[0;32mI (2138624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2138624) led task : led off[0m
+[0;32mI (2140624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2140624) led task : led on[0m
+[0;32mI (2142624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2142624) led task : led off[0m
+[0;32mI (2144624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2144624) led task : led on[0m
+[0;32mI (2146624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2146624) led task : led off[0m
+[0;32mI (2148624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2148624) led task : led on[0m
+[0;32mI (2150624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2150624) led task : led off[0m
+[0;32mI (2152624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2152624) led task : led on[0m
+[0;32mI (2154624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2154624) led task : led off[0m
+[0;32mI (2156624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2156624) led task : led on[0m
+[0;32mI (2158624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2158624) led task : led off[0m
+[0;32mI (2160624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2160624) led task : led on[0m
+[0;32mI (2162624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2162624) led task : led off[0m
+[0;32mI (2164624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2164624) led task : led on[0m
+[0;32mI (2166624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2166624) led task : led off[0m
+[0;32mI (2168624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2168624) led task : led on[0m
+[0;32mI (2170624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2170624) led task : led off[0m
+[0;32mI (2172624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2172624) led task : led on[0m
+[0;32mI (2174624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2174624) led task : led off[0m
+[0;32mI (2176624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2176624) led task : led on[0m
+[0;32mI (2178624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2178624) led task : led off[0m
+[0;32mI (2180624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2180624) led task : led on[0m
+[0;32mI (2182624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2182624) led task : led off[0m
+[0;32mI (2184624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2184624) led task : led on[0m
+[0;32mI (2186624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2186624) led task : led off[0m
+[0;32mI (2188624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2188624) led task : led on[0m
+[0;32mI (2190624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2190624) led task : led off[0m
+[0;32mI (2192624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2192624) led task : led on[0m
+[0;32mI (2194624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2194624) led task : led off[0m
+[0;32mI (2196624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2196624) led task : led on[0m
+[0;32mI (2198624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2198624) led task : led off[0m
+[0;32mI (2200624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2200624) led task : led on[0m
+[0;32mI (2202624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2202624) led task : led off[0m
+[0;32mI (2204624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2204624) led task : led on[0m
+[0;32mI (2206624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2206624) led task : led off[0m
+[0;32mI (2208624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2208624) led task : led on[0m
+[0;32mI (2210624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2210624) led task : led off[0m
+[0;32mI (2212624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2212624) led task : led on[0m
+[0;32mI (2214624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2214624) led task : led off[0m
+[0;32mI (2216624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2216624) led task : led on[0m
+[0;32mI (2218624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2218624) led task : led off[0m
+[0;32mI (2220624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2220624) led task : led on[0m
+[0;32mI (2222624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2222624) led task : led off[0m
+[0;32mI (2224624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2224624) led task : led on[0m
+[0;32mI (2226624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2226624) led task : led off[0m
+[0;32mI (2228624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2228624) led task : led on[0m
+[0;32mI (2230624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2230624) led task : led off[0m
+[0;32mI (2232624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2232624) led task : led on[0m
+[0;32mI (2234624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2234624) led task : led off[0m
+[0;32mI (2236624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2236624) led task : led on[0m
+[0;32mI (2238624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2238624) led task : led off[0m
+[0;32mI (2240624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2240624) led task : led on[0m
+[0;32mI (2242624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2242624) led task : led off[0m
+[0;32mI (2244624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2244624) led task : led on[0m
+[0;32mI (2246624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2246624) led task : led off[0m
+[0;32mI (2248624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2248624) led task : led on[0m
+[0;32mI (2250624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2250624) led task : led off[0m
+[0;32mI (2252624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2252624) led task : led on[0m
+[0;32mI (2254624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2254624) led task : led off[0m
+[0;32mI (2256624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2256624) led task : led on[0m
+[0;32mI (2258624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2258624) led task : led off[0m
+[0;32mI (2260624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2260624) led task : led on[0m
+[0;32mI (2262624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2262624) led task : led off[0m
+[0;32mI (2264624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2264624) led task : led on[0m
+[0;32mI (2266624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2266624) led task : led off[0m
+[0;32mI (2268624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2268624) led task : led on[0m
+[0;32mI (2270624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2270624) led task : led off[0m
+[0;32mI (2272624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2272624) led task : led on[0m
+[0;32mI (2274624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2274624) led task : led off[0m
+[0;32mI (2276624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2276624) led task : led on[0m
+[0;32mI (2278624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2278624) led task : led off[0m
+[0;32mI (2280624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2280624) led task : led on[0m
+[0;32mI (2282624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2282624) led task : led off[0m
+[0;32mI (2284624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2284624) led task : led on[0m
+[0;32mI (2286624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2286624) led task : led off[0m
+[0;32mI (2288624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2288624) led task : led on[0m
+[0;32mI (2290624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2290624) led task : led off[0m
+[0;32mI (2292624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2292624) led task : led on[0m
+[0;32mI (2294624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2294624) led task : led off[0m
+[0;32mI (2296624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2296624) led task : led on[0m
+[0;32mI (2298624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2298624) led task : led off[0m
+[0;32mI (2300624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2300624) led task : led on[0m
+[0;32mI (2302624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2302624) led task : led off[0m
+[0;32mI (2304624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2304624) led task : led on[0m
+[0;32mI (2306624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2306624) led task : led off[0m
+[0;32mI (2308624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2308624) led task : led on[0m
+[0;32mI (2310624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2310624) led task : led off[0m
+[0;32mI (2312624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2312624) led task : led on[0m
+[0;32mI (2314624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2314624) led task : led off[0m
+[0;32mI (2316624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2316624) led task : led on[0m
+[0;32mI (2318624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2318624) led task : led off[0m
+[0;32mI (2320624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2320624) led task : led on[0m
+[0;32mI (2322624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2322624) led task : led off[0m
+[0;32mI (2324624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2324624) led task : led on[0m
+[0;32mI (2326624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2326624) led task : led off[0m
+[0;32mI (2328624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2328624) led task : led on[0m
+[0;32mI (2330624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2330624) led task : led off[0m
+[0;32mI (2332624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2332624) led task : led on[0m
+[0;32mI (2334624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2334624) led task : led off[0m
+[0;32mI (2336624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2336624) led task : led on[0m
+[0;32mI (2338624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2338624) led task : led off[0m
+[0;32mI (2340624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2340624) led task : led on[0m
+[0;32mI (2342624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2342624) led task : led off[0m
+[0;32mI (2344624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2344624) led task : led on[0m
+[0;32mI (2346624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2346624) led task : led off[0m
+[0;32mI (2348624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2348624) led task : led on[0m
+[0;32mI (2350624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2350624) led task : led off[0m
+[0;32mI (2352624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2352624) led task : led on[0m
+[0;32mI (2354624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2354624) led task : led off[0m
+[0;32mI (2356624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2356624) led task : led on[0m
+[0;32mI (2358624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2358624) led task : led off[0m
+[0;32mI (2360624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2360624) led task : led on[0m
+[0;32mI (2362624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2362624) led task : led off[0m
+[0;32mI (2364624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2364624) led task : led on[0m
+[0;32mI (2366624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2366624) led task : led off[0m
+[0;32mI (2368624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2368624) led task : led on[0m
+[0;32mI (2370624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2370624) led task : led off[0m
+[0;32mI (2372624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2372624) led task : led on[0m
+[0;32mI (2374624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2374624) led task : led off[0m
+[0;32mI (2376624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2376624) led task : led on[0m
+[0;32mI (2378624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2378624) led task : led off[0m
+[0;32mI (2380624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2380624) led task : led on[0m
+[0;32mI (2382624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2382624) led task : led off[0m
+[0;32mI (2384624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2384624) led task : led on[0m
+[0;32mI (2386624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2386624) led task : led off[0m
+[0;32mI (2388624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2388624) led task : led on[0m
+[0;32mI (2390624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2390624) led task : led off[0m
+[0;32mI (2392624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2392624) led task : led on[0m
+[0;32mI (2394624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2394624) led task : led off[0m
+[0;32mI (2396624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2396624) led task : led on[0m
+[0;32mI (2398624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2398624) led task : led off[0m
+[0;32mI (2400624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2400624) led task : led on[0m
+[0;32mI (2402624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2402624) led task : led off[0m
+[0;32mI (2404624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2404624) led task : led on[0m
+[0;32mI (2406624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2406624) led task : led off[0m
+[0;32mI (2408624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2408624) led task : led on[0m
+[0;32mI (2410624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2410624) led task : led off[0m
+[0;32mI (2412624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2412624) led task : led on[0m
+[0;32mI (2414624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2414624) led task : led off[0m
+[0;32mI (2416624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2416624) led task : led on[0m
+[0;32mI (2418624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2418624) led task : led off[0m
+[0;32mI (2420624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2420624) led task : led on[0m
+[0;32mI (2422624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2422624) led task : led off[0m
+[0;32mI (2424624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2424624) led task : led on[0m
+[0;32mI (2426624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2426624) led task : led off[0m
+[0;32mI (2428624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2428624) led task : led on[0m
+[0;32mI (2430624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2430624) led task : led off[0m
+[0;32mI (2432624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2432624) led task : led on[0m
+[0;32mI (2434624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2434624) led task : led off[0m
+[0;32mI (2436624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2436624) led task : led on[0m
+[0;32mI (2438624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2438624) led task : led off[0m
+[0;32mI (2440624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2440624) led task : led on[0m
+[0;32mI (2442624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2442624) led task : led off[0m
+[0;32mI (2444624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2444624) led task : led on[0m
+[0;32mI (2446624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2446624) led task : led off[0m
+[0;32mI (2448624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2448624) led task : led on[0m
+[0;32mI (2450624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2450624) led task : led off[0m
+[0;32mI (2452624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2452624) led task : led on[0m
+[0;32mI (2454624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2454624) led task : led off[0m
+[0;32mI (2456624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2456624) led task : led on[0m
+[0;32mI (2458624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2458624) led task : led off[0m
+[0;32mI (2460624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2460624) led task : led on[0m
+[0;32mI (2462624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2462624) led task : led off[0m
+[0;32mI (2464624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2464624) led task : led on[0m
+[0;32mI (2466624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2466624) led task : led off[0m
+[0;32mI (2468624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2468624) led task : led on[0m
+[0;32mI (2470624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2470624) led task : led off[0m
+[0;32mI (2472624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2472624) led task : led on[0m
+[0;32mI (2474624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2474624) led task : led off[0m
+[0;32mI (2476624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2476624) led task : led on[0m
+[0;32mI (2478624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2478624) led task : led off[0m
+[0;32mI (2480624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2480624) led task : led on[0m
+[0;32mI (2482624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2482624) led task : led off[0m
+[0;32mI (2484624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2484624) led task : led on[0m
+[0;32mI (2486624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2486624) led task : led off[0m
+[0;32mI (2488624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2488624) led task : led on[0m
+[0;32mI (2490624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2490624) led task : led off[0m
+[0;32mI (2492624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2492624) led task : led on[0m
+[0;32mI (2494624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2494624) led task : led off[0m
+[0;32mI (2496624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2496624) led task : led on[0m
+[0;32mI (2498624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2498624) led task : led off[0m
+[0;32mI (2500624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2500624) led task : led on[0m
+[0;32mI (2502624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2502624) led task : led off[0m
+[0;32mI (2504624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2504624) led task : led on[0m
+[0;32mI (2506624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2506624) led task : led off[0m
+[0;32mI (2508624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2508624) led task : led on[0m
+[0;32mI (2510624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2510624) led task : led off[0m
+[0;32mI (2512624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2512624) led task : led on[0m
+[0;32mI (2514624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2514624) led task : led off[0m
+[0;32mI (2516624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2516624) led task : led on[0m
+[0;32mI (2518624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2518624) led task : led off[0m
+[0;32mI (2520624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2520624) led task : led on[0m
+[0;32mI (2522624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2522624) led task : led off[0m
+[0;32mI (2524624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2524624) led task : led on[0m
+[0;32mI (2526624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2526624) led task : led off[0m
+[0;32mI (2528624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2528624) led task : led on[0m
+[0;32mI (2530624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2530624) led task : led off[0m
+[0;32mI (2532624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2532624) led task : led on[0m
+[0;32mI (2534624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2534624) led task : led off[0m
+[0;32mI (2536624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2536624) led task : led on[0m
+[0;32mI (2538624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2538624) led task : led off[0m
+[0;32mI (2540624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2540624) led task : led on[0m
+[0;32mI (2542624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2542624) led task : led off[0m
+[0;32mI (2544624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2544624) led task : led on[0m
+[0;32mI (2546624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2546624) led task : led off[0m
+[0;32mI (2548624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2548624) led task : led on[0m
+[0;32mI (2550624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2550624) led task : led off[0m
+[0;32mI (2552624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2552624) led task : led on[0m
+[0;32mI (2554624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2554624) led task : led off[0m
+[0;32mI (2556624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2556624) led task : led on[0m
+[0;32mI (2558624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2558624) led task : led off[0m
+[0;32mI (2560624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2560624) led task : led on[0m
+[0;32mI (2562624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2562624) led task : led off[0m
+[0;32mI (2564624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2564624) led task : led on[0m
+[0;32mI (2566624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2566624) led task : led off[0m
+[0;32mI (2568624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2568624) led task : led on[0m
+[0;32mI (2570624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2570624) led task : led off[0m
+[0;32mI (2572624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2572624) led task : led on[0m
+[0;32mI (2574624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2574624) led task : led off[0m
+[0;32mI (2576624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2576624) led task : led on[0m
+[0;32mI (2578624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2578624) led task : led off[0m
+[0;32mI (2580624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2580624) led task : led on[0m
+[0;32mI (2582624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2582624) led task : led off[0m
+[0;32mI (2584624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2584624) led task : led on[0m
+[0;32mI (2586624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2586624) led task : led off[0m
+[0;32mI (2588624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2588624) led task : led on[0m
+[0;32mI (2590624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2590624) led task : led off[0m
+[0;32mI (2592624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2592624) led task : led on[0m
+[0;32mI (2594624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2594624) led task : led off[0m
+[0;32mI (2596624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2596624) led task : led on[0m
+[0;32mI (2598624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2598624) led task : led off[0m
+[0;32mI (2600624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2600624) led task : led on[0m
+[0;32mI (2602624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2602624) led task : led off[0m
+[0;32mI (2604624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2604624) led task : led on[0m
+[0;32mI (2606624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2606624) led task : led off[0m
+[0;32mI (2608624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2608624) led task : led on[0m
+[0;32mI (2610624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2610624) led task : led off[0m
+[0;32mI (2612624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2612624) led task : led on[0m
+[0;32mI (2614624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2614624) led task : led off[0m
+[0;32mI (2616624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2616624) led task : led on[0m
+[0;32mI (2618624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2618624) led task : led off[0m
+[0;32mI (2620624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2620624) led task : led on[0m
+[0;32mI (2622624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2622624) led task : led off[0m
+[0;32mI (2624624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2624624) led task : led on[0m
+[0;32mI (2626624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2626624) led task : led off[0m
+[0;32mI (2628624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2628624) led task : led on[0m
+[0;32mI (2630624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2630624) led task : led off[0m
+[0;32mI (2632624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2632624) led task : led on[0m
+[0;32mI (2634624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2634624) led task : led off[0m
+[0;32mI (2636624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2636624) led task : led on[0m
+[0;32mI (2638624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2638624) led task : led off[0m
+[0;32mI (2640624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2640624) led task : led on[0m
+[0;32mI (2642624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2642624) led task : led off[0m
+[0;32mI (2644624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2644624) led task : led on[0m
+[0;32mI (2646624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2646624) led task : led off[0m
+[0;32mI (2648624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2648624) led task : led on[0m
+[0;32mI (2650624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2650624) led task : led off[0m
+[0;32mI (2652624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2652624) led task : led on[0m
+[0;32mI (2654624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2654624) led task : led off[0m
+[0;32mI (2656624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2656624) led task : led on[0m
+[0;32mI (2658624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2658624) led task : led off[0m
+[0;32mI (2660624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2660624) led task : led on[0m
+[0;32mI (2662624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2662624) led task : led off[0m
+[0;32mI (2664624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2664624) led task : led on[0m
+[0;32mI (2666624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2666624) led task : led off[0m
+[0;32mI (2668624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2668624) led task : led on[0m
+[0;32mI (2670624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2670624) led task : led off[0m
+[0;32mI (2672624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2672624) led task : led on[0m
+[0;32mI (2674624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2674624) led task : led off[0m
+[0;32mI (2676624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2676624) led task : led on[0m
+[0;32mI (2678624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2678624) led task : led off[0m
+[0;32mI (2680624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2680624) led task : led on[0m
+[0;32mI (2682624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2682624) led task : led off[0m
+[0;32mI (2684624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2684624) led task : led on[0m
+[0;32mI (2686624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2686624) led task : led off[0m
+[0;32mI (2688624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2688624) led task : led on[0m
+[0;32mI (2690624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2690624) led task : led off[0m
+[0;32mI (2692624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2692624) led task : led on[0m
+[0;32mI (2694624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2694624) led task : led off[0m
+[0;32mI (2696624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2696624) led task : led on[0m
+[0;32mI (2698624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2698624) led task : led off[0m
+[0;32mI (2700624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2700624) led task : led on[0m
+[0;32mI (2702624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2702624) led task : led off[0m
+[0;32mI (2704624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2704624) led task : led on[0m
+[0;32mI (2706624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2706624) led task : led off[0m
+[0;32mI (2708624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2708624) led task : led on[0m
+[0;32mI (2710624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2710624) led task : led off[0m
+[0;32mI (2712624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2712624) led task : led on[0m
+[0;32mI (2714624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2714624) led task : led off[0m
+[0;32mI (2716624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2716624) led task : led on[0m
+[0;32mI (2718624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2718624) led task : led off[0m
+[0;32mI (2720624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2720624) led task : led on[0m
+[0;32mI (2722624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2722624) led task : led off[0m
+[0;32mI (2724624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2724624) led task : led on[0m
+[0;32mI (2726624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2726624) led task : led off[0m
+[0;32mI (2728624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2728624) led task : led on[0m
+[0;32mI (2730624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2730624) led task : led off[0m
+[0;32mI (2732624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2732624) led task : led on[0m
+[0;32mI (2734624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2734624) led task : led off[0m
+[0;32mI (2736624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2736624) led task : led on[0m
+[0;32mI (2738624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2738624) led task : led off[0m
+[0;32mI (2740624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2740624) led task : led on[0m
+[0;32mI (2742624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2742624) led task : led off[0m
+[0;32mI (2744624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2744624) led task : led on[0m
+[0;32mI (2746624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2746624) led task : led off[0m
+[0;32mI (2748624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2748624) led task : led on[0m
+[0;32mI (2750624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2750624) led task : led off[0m
+[0;32mI (2752624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2752624) led task : led on[0m
+[0;32mI (2754624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2754624) led task : led off[0m
+[0;32mI (2756624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2756624) led task : led on[0m
+[0;32mI (2758624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2758624) led task : led off[0m
+[0;32mI (2760624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2760624) led task : led on[0m
+[0;32mI (2762624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2762624) led task : led off[0m
+[0;32mI (2764624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2764624) led task : led on[0m
+[0;32mI (2766624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2766624) led task : led off[0m
+[0;32mI (2768624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2768624) led task : led on[0m
+[0;32mI (2770624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2770624) led task : led off[0m
+[0;32mI (2772624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2772624) led task : led on[0m
+[0;32mI (2774624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2774624) led task : led off[0m
+[0;32mI (2776624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2776624) led task : led on[0m
+[0;32mI (2778624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2778624) led task : led off[0m
+[0;32mI (2780624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2780624) led task : led on[0m
+[0;32mI (2782624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2782624) led task : led off[0m
+[0;32mI (2784624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2784624) led task : led on[0m
+[0;32mI (2786624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2786624) led task : led off[0m
+[0;32mI (2788624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2788624) led task : led on[0m
+[0;32mI (2790624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2790624) led task : led off[0m
+[0;32mI (2792624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2792624) led task : led on[0m
+[0;32mI (2794624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2794624) led task : led off[0m
+[0;32mI (2796624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2796624) led task : led on[0m
+[0;32mI (2798624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2798624) led task : led off[0m
+[0;32mI (2800624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2800624) led task : led on[0m
+[0;32mI (2802624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2802624) led task : led off[0m
+[0;32mI (2804624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2804624) led task : led on[0m
+[0;32mI (2806624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2806624) led task : led off[0m
+[0;32mI (2808624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2808624) led task : led on[0m
+[0;32mI (2810624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2810624) led task : led off[0m
+[0;32mI (2812624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2812624) led task : led on[0m
+[0;32mI (2814624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2814624) led task : led off[0m
+[0;32mI (2816624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2816624) led task : led on[0m
+[0;32mI (2818624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2818624) led task : led off[0m
+[0;32mI (2820624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2820624) led task : led on[0m
+[0;32mI (2822624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2822624) led task : led off[0m
+[0;32mI (2824624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2824624) led task : led on[0m
+[0;32mI (2826624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2826624) led task : led off[0m
+[0;32mI (2828624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2828624) led task : led on[0m
+[0;32mI (2830624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2830624) led task : led off[0m
+[0;32mI (2832624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2832624) led task : led on[0m
+[0;32mI (2834624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2834624) led task : led off[0m
+[0;32mI (2836624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2836624) led task : led on[0m
+[0;32mI (2838624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2838624) led task : led off[0m
+[0;32mI (2840624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2840624) led task : led on[0m
+[0;32mI (2842624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2842624) led task : led off[0m
+[0;32mI (2844624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2844624) led task : led on[0m
+[0;32mI (2846624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2846624) led task : led off[0m
+[0;32mI (2848624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2848624) led task : led on[0m
+[0;32mI (2850624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2850624) led task : led off[0m
+[0;32mI (2852624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2852624) led task : led on[0m
+[0;32mI (2854624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2854624) led task : led off[0m
+[0;32mI (2856624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2856624) led task : led on[0m
+[0;32mI (2858624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2858624) led task : led off[0m
+[0;32mI (2860624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2860624) led task : led on[0m
+[0;32mI (2862624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2862624) led task : led off[0m
+[0;32mI (2864624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2864624) led task : led on[0m
+[0;32mI (2866624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2866624) led task : led off[0m
+[0;32mI (2868624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2868624) led task : led on[0m
+[0;32mI (2870624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2870624) led task : led off[0m
+[0;32mI (2872624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2872624) led task : led on[0m
+[0;32mI (2874624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2874624) led task : led off[0m
+[0;32mI (2876624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2876624) led task : led on[0m
+[0;32mI (2878624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2878624) led task : led off[0m
+[0;32mI (2880624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2880624) led task : led on[0m
+[0;32mI (2882624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2882624) led task : led off[0m
+[0;32mI (2884624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2884624) led task : led on[0m
+[0;32mI (2886624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2886624) led task : led off[0m
+[0;32mI (2888624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2888624) led task : led on[0m
+[0;32mI (2890624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2890624) led task : led off[0m
+[0;32mI (2892624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2892624) led task : led on[0m
+[0;32mI (2894624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2894624) led task : led off[0m
+[0;32mI (2896624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2896624) led task : led on[0m
+[0;32mI (2898624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2898624) led task : led off[0m
+[0;32mI (2900624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2900624) led task : led on[0m
+[0;32mI (2902624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2902624) led task : led off[0m
+[0;32mI (2904624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2904624) led task : led on[0m
+[0;32mI (2906624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2906624) led task : led off[0m
+[0;32mI (2908624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2908624) led task : led on[0m
+[0;32mI (2910624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2910624) led task : led off[0m
+[0;32mI (2912624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2912624) led task : led on[0m
+[0;32mI (2914624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2914624) led task : led off[0m
+[0;32mI (2916624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2916624) led task : led on[0m
+[0;32mI (2918624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2918624) led task : led off[0m
+[0;32mI (2920624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2920624) led task : led on[0m
+[0;32mI (2922624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2922624) led task : led off[0m
+[0;32mI (2924624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2924624) led task : led on[0m
+[0;32mI (2926624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2926624) led task : led off[0m
+[0;32mI (2928624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2928624) led task : led on[0m
+[0;32mI (2930624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2930624) led task : led off[0m
+[0;32mI (2932624) CTRL_TASK: Send LED ON[0m
+[0;32mI (2932624) led task : led on[0m
+[0;32mI (2934624) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2934624) led task : led off[0m
+[0;32mI (1014) wifi:connected with 509 TQV, aid = 6, channel 11, BW20, bssid = a8:15:4d:e2:2c:78[0m
+[0;32mI (1014) wifi:security: WPA2-PSK, phy:bgn, rssi:-59, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1024) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1024) wifi:pm start, type:1, aid:0x6, trans-BSSID:a8:15:4d:e2:2c:78, BSSID[5]:0x78, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1034) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1044) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1054) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1064) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1074) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1084) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1094) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1104) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1114) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (1124) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100782c, TALO:0xe24d15a8, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (2134) esp_netif_handlers: sta ip: 192.168.83.115, mask: 255.255.255.0, gw: 192.168.83.1[0m
+[0;32mI (2134) wifi: Got IP: 192.168.83.115[0m
+[0;32mI (2604) CTRL_TASK: Send LED OFF[0m
+[0;32mI (2604) led task : led off[0m
+[0;32mI (4604) CTRL_TASK: Send LED ON[0m
+[0;32mI (4604) led task : led on[0m
+[0;32mI (6604) CTRL_TASK: Send LED OFF[0m
+[0;32mI (6604) led task : led off[0m
+[0;32mI (8604) CTRL_TASK: Send LED ON[0m
+[0;32mI (8604) led task : led on[0m
+[0;32mI (10604) CTRL_TASK: Send LED OFF[0m
+[0;32mI (10604) led task : led off[0m

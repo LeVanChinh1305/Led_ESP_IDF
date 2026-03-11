@@ -1,64 +1,87 @@
 #include <stdio.h>
-#include "freertos/FreeRTOS.h"     // Thư viện lõi của FreeRTOS
-#include "freertos/task.h"         // Quản lý Task (xTaskCreate, vTaskDelay...)
-#include "led.h"                   // Thư viện LED bạn tự viết
-#include "esp_log.h"               // Log của ESP-IDF (ESP_LOGI)
-#include "wifi.h"                  // Thư viện WiFi bạn tự viết
-#include "nvs_flash.h"              // Thư viện quản lý flash (nvs_flash_init)
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/event_groups.h"
+#include "led.h"
+#include "esp_log.h"
+#include "wifi.h"
+#include "nvs_flash.h"
+#include "webserver.h"
+#include "button.h" // Đã có button_event_queue ở đây
 
 static const char *TAG = "MAIN";
 
-QueueHandle_t led_queue; // hàng đợi truyền dữ liệu giữa các task
-EventGroupHandle_t led_event_group; // nhóm sự kiện để đồng bộ hóa giữa các task (để bật/tắt led)
-#define LED_ON_BIT BIT0 // định nghĩa bit để bật led
-#define LED_OFF_BIT BIT1 // định nghĩa bit để tắt led
+EventGroupHandle_t led_event_group;
+#define LED_ON_BIT  BIT0
+#define LED_OFF_BIT BIT1
 
-// led task
 void led_task(void *pv){
-    while(1){ // Loop forever chạy liên tục 
-        EventBits_t bits = xEventGroupWaitBits( // Wait for LED control bits
-            led_event_group, // Nhóm sự kiện để chờ
-            LED_ON_BIT|LED_OFF_BIT, // Các bit mà task này quan tâm (bật hoặc tắt led)
-            pdTRUE, // Clear bits on exit (sau khi nhận được sự kiện sẽ tự động xóa bit đó)
-            pdFALSE, // Wait for any bit (không cần phải chờ cả 2 bit cùng lúc)
-            portMAX_DELAY // Wait indefinitely (task sẽ chờ mãi cho đến khi có sự kiện xảy ra)
+    int pin_num; // Biến tạm để nhận số chân từ Queue
+    while(1){
+        // --- NHÁNH 1: ĐỢI LỆNH TỪ WEB (Timeout 10ms thay vì MAX_DELAY) ---
+        EventBits_t bits = xEventGroupWaitBits(
+            led_event_group, 
+            LED_ON_BIT | LED_OFF_BIT, 
+            pdTRUE,             
+            pdFALSE,            
+            pdMS_TO_TICKS(10)   // Chỉ đợi 10ms rồi kiểm tra tiếp việc khác
         );
+
         if(bits & LED_ON_BIT){
             led_on();
-            ESP_LOGI("led task ", "led on");
+            ESP_LOGI("LED_TASK", "Web: ĐANG BẬT");
         }
         if(bits & LED_OFF_BIT){
             led_off();
-            ESP_LOGI("led task ","led off");
+            ESP_LOGI("LED_TASK", "Web: ĐANG TẮT");
         }
-    }
-}
 
-// control task 
-void control_task(void *pv){// Simulate control commands
-    while(1){
-        ESP_LOGI("CTRL_TASK", "Send LED ON");// Send LED ON command
-        xEventGroupSetBits(led_event_group, LED_ON_BIT); // Set bit để bật led
-        vTaskDelay(pdMS_TO_TICKS(2000)); 
-        ESP_LOGI("CTRL_TASK", "Send LED OFF");// Send LED OFF command
-        xEventGroupSetBits(led_event_group, LED_OFF_BIT); // Set bit để tắt led
-        vTaskDelay(pdMS_TO_TICKS(2000)); 
+        // --- NHÁNH 2: ĐỢI LỆNH TỪ NÚT BẤM (QUEUE) ---
+        // button_event_queue phải khớp với tên trong button.h của bạn
+        if (xQueueReceive(button_event_queue, &pin_num, pdMS_TO_TICKS(10))) {
+            // Chống rung (Debounce) đơn giản
+            vTaskDelay(pdMS_TO_TICKS(50));
+            
+            if (gpio_get_level(pin_num) == 0) { // Nếu vẫn đang nhấn (mức thấp)
+                // Đảo trạng thái LED
+                if (led_get_state() == 1) {
+                    led_off();
+                    ESP_LOGI("LED_TASK", "Button: Chuyển sang TẮT");
+                } else {
+                    led_on();
+                    ESP_LOGI("LED_TASK", "Button: Chuyển sang BẬT");
+                }
+            }
+        }
+        
+        // Tránh chiếm dụng CPU quá mức
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
 
 void app_main(void)
 {
-    ESP_LOGI(TAG, "App started!");
+    ESP_LOGI(TAG, "He thong dang khoi dong...");
 
-    nvs_flash_init(); // Khởi tạo NVS (Non-Volatile Storage) để lưu trữ thông tin WiFi
-    wifi_init_sta(); // Khởi tạo WiFi
+    // 1. Khởi tạo NVS
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        ret = nvs_flash_init();
+    }
+    ESP_ERROR_CHECK(ret);
+    
+    // 2. WiFi
+    wifi_init_sta();
 
-    led_init(GPIO_NUM_20);// Initialize LED on GPIO 20 (đảm bảo rằng bạn đã kết nối LED với chân GPIO này)  
+    // 3. Phần cứng (Lưu ý: Khởi tạo Event Group TRƯỚC khi khởi tạo Button/Web)
+    led_event_group = xEventGroupCreate();
+    led_init(GPIO_NUM_20);
+    button_init(BUTTON_GPIO_PIN); 
 
-    led_queue = xQueueCreate(5, sizeof(int)); // Tạo hàng đợi với 5 phần tử, mỗi phần tử có kích thước bằng một int (dùng để truyền lệnh bật/tắt led)
-    led_event_group = xEventGroupCreate(); // Tạo nhóm sự kiện để đồng bộ hóa giữa các task
+    // 4. Tạo Task (Tăng stack lên 4096 cho an toàn vì có LOG và Queue)
+    xTaskCreate(led_task, "Led Task", 4096, NULL, 5, NULL);
 
-    xTaskCreate(led_task, "Led Task", 2048, NULL, 5, NULL);
-    xTaskCreate(control_task, "Control Task", 2048, NULL, 4, NULL);
+    // 5. Khởi động Web Server
+    start_webserver();
 }
-

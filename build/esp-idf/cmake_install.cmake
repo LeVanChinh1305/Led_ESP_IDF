@@ -559,11 +559,26 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/App/esp_idf/led_project/build/esp-idf/main/cmake_install.cmake")
+  include("D:/App/esp_idf/led_project/build/esp-idf/led/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/App/esp_idf/led_project/build/esp-idf/led/cmake_install.cmake")
+  include("D:/App/esp_idf/led_project/build/esp-idf/button/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("D:/App/esp_idf/led_project/build/esp-idf/wifi/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("D:/App/esp_idf/led_project/build/esp-idf/webserver/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("D:/App/esp_idf/led_project/build/esp-idf/main/cmake_install.cmake")
 endif()
 

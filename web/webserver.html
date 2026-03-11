@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; background-color: #f4f4f4; }
+        .btn { padding: 15px 30px; font-size: 20px; color: white; border: none; border-radius: 10px; cursor: pointer; margin: 10px; transition: 0.3s; }
+        .on { background-color: #4CAF50; }
+        .off { background-color: #f44336; }
+        .btn:hover { opacity: 0.8; }
+        .btn:active { transform: scale(0.9); }
+    </style>
+</head>
+<body>
+    <h1>ESP32 SMART CONTROL</h1>
+    
+    <div style="font-size: 24px; margin-bottom: 20px;">
+        Trạng thái: <span id="led-status" style="font-weight: bold; color: blue;">Đang kiểm tra...</span>
+    </div>
+
+    <button class="btn on" onclick="controlLed('/led_on')">BẬT ĐÈN</button>
+    <button class="btn off" onclick="controlLed('/led_off')">TẮT ĐÈN</button>
+
+    <script>
+        function controlLed(url) {
+            fetch(url).then(() => {
+                updateLedStatus(); // Sau khi nhấn nút, cập nhật trạng thái ngay lập tức
+            });
+        }
+
+        function updateLedStatus() {
+            fetch('/led_status')
+                .then(response => response.text())
+                .then(state => {
+                    const statusElem = document.getElementById('led-status');
+                    statusElem.innerText = (state === "ON") ? "ĐANG BẬT" : "ĐANG TẮT";
+                    statusElem.style.color = (state === "ON") ? "green" : "red";
+                });
+        }
+
+        // Tự động cập nhật trạng thái mỗi 1 giây để đồng bộ
+        setInterval(updateStatus, 1000);
+        
+        // Gọi lần đầu khi vừa load trang
+        updateStatus();
+    </script>
+</body>
+</html>
