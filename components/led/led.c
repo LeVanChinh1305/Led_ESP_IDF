@@ -27,5 +27,5 @@ void led_toggle(void){ // Toggle the LED state
 }
 
 int led_get_state(void){
-    return gpio_get_level(led_pin);
+    return gpio_get_level(led_pin); // Trả về trạng thái hiện tại của LED (1 nếu bật, 0 nếu tắt)
 }

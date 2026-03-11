@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "led_project",
-    "project_version":    "0015cd1-dirty",
+    "project_version":    "32280af-dirty",
     "project_path":       "D:/App/esp_idf/led_project",
     "idf_path":           "D:/App/esp_idf/Espressif/frameworks/esp-idf-v5.5.2",
     "build_dir":          "D:/App/esp_idf/led_project/build",
