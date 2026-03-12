@@ -5,8 +5,8 @@
 #include "nvs_flash.h"      // Thư viện quản lý flash NVS của ESP-IDF
 #include "esp_netif.h"      // Thư viện quản lý giao diện mạng của ESP-IDF
 
-#define WIFI_SSID "SUA CHUA TRAN CHAU HA LONG"
-#define WIFI_PASS "@12345678"
+#define WIFI_SSID "509 TQV"
+#define WIFI_PASS "83838383"
 
 static const char *TAG = "wifi";
 

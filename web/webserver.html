@@ -3,47 +3,88 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <title>ESP32 Dashboard</title>
     <style>
-        body { font-family: Arial; text-align: center; margin-top: 50px; background-color: #f4f4f4; }
-        .btn { padding: 15px 30px; font-size: 20px; color: white; border: none; border-radius: 10px; cursor: pointer; margin: 10px; transition: 0.3s; }
-        .on { background-color: #4CAF50; }
-        .off { background-color: #f44336; }
-        .btn:hover { opacity: 0.8; }
-        .btn:active { transform: scale(0.9); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background-color: #f0f2f5; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 15px; shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #1a73e8; font-size: 24px; }
+        
+        /* Style cho phần Sensor */
+        .sensor-container { display: flex; justify-content: space-around; margin: 20px 0; padding: 15px; background: #e8f0fe; border-radius: 10px; }
+        .sensor-box { flex: 1; }
+        .sensor-label { font-size: 14px; color: #666; display: block; }
+        .sensor-value { font-size: 28px; font-weight: bold; color: #1967d2; }
+
+        /* Style cho LED */
+        .status-box { font-size: 18px; margin-bottom: 20px; padding: 10px; border-top: 1px solid #eee; }
+        .btn { padding: 15px 25px; font-size: 16px; color: white; border: none; border-radius: 8px; cursor: pointer; margin: 5px; transition: 0.2s; min-width: 120px; font-weight: bold; }
+        .on { background-color: #34a853; }
+        .off { background-color: #ea4335; }
+        .btn:hover { opacity: 0.85; transform: translateY(-2px); }
+        .btn:active { transform: scale(0.95); }
     </style>
 </head>
 <body>
-    <h1>ESP32 SMART CONTROL</h1>
-    
-    <div style="font-size: 24px; margin-bottom: 20px;">
-        Trạng thái: <span id="led-status" style="font-weight: bold; color: blue;">Đang kiểm tra...</span>
+    <div class="container">
+        <h1>ESP32 SMART DASHBOARD</h1>
+        
+        <div class="sensor-container">
+            <div class="sensor-box">
+                <span class="sensor-label">Nhiệt độ</span>
+                <span id="temp-val" class="sensor-value">--</span><span class="sensor-value">°C</span>
+            </div>
+            <div class="sensor-box" style="border-left: 1px solid #ccc;">
+                <span class="sensor-label">Độ ẩm</span>
+                <span id="hum-val" class="sensor-value">--</span><span class="sensor-value">%</span>
+            </div>
+        </div>
+
+        <div class="status-box">
+            Trạng thái Đèn: <span id="led-status" style="font-weight: bold;">...</span>
+        </div>
+
+        <button class="btn on" onclick="controlLed('/led_on')">BẬT ĐÈN</button>
+        <button class="btn off" onclick="controlLed('/led_off')">TẮT ĐÈN</button>
     </div>
 
-    <button class="btn on" onclick="controlLed('/led_on')">BẬT ĐÈN</button>
-    <button class="btn off" onclick="controlLed('/led_off')">TẮT ĐÈN</button>
-
     <script>
+        // 1. Hàm điều khiển LED
         function controlLed(url) {
             fetch(url).then(() => {
-                updateLedStatus(); // Sau khi nhấn nút, cập nhật trạng thái ngay lập tức
+                updateLedStatus();
             });
         }
 
+        // 2. Hàm cập nhật trạng thái LED
         function updateLedStatus() {
             fetch('/led_status')
                 .then(response => response.text())
                 .then(state => {
                     const statusElem = document.getElementById('led-status');
                     statusElem.innerText = (state === "ON") ? "ĐANG BẬT" : "ĐANG TẮT";
-                    statusElem.style.color = (state === "ON") ? "green" : "red";
+                    statusElem.style.color = (state === "ON") ? "#34a853" : "#ea4335";
                 });
         }
 
-        // Tự động cập nhật trạng thái mỗi 1 giây để đồng bộ
-        setInterval(updateLedStatus, 1000);
+        // 3. HÀM CẬP NHẬT NHIỆT ĐỘ, ĐỘ ẨM (Mới thêm)
+        function updateSensorData() {
+            fetch('/sensor_data')
+                .then(response => response.json()) // Nhận JSON từ ESP32
+                .then(data => {
+                    // data.t và data.h phải khớp với key bạn sprintf trong webserver.c
+                    document.getElementById('temp-val').innerText = data.t.toFixed(1);
+                    document.getElementById('hum-val').innerText = data.h.toFixed(1);
+                })
+                .catch(err => console.error("Lỗi lấy dữ liệu DHT11:", err));
+        }
+
+        // Thiết lập vòng lặp cập nhật
+        setInterval(updateLedStatus, 2000);  // 2 giây cập nhật trạng thái LED
+        setInterval(updateSensorData, 2000); // 2 giây cập nhật DHT11
         
-        // Gọi lần đầu khi vừa load trang
+        // Gọi ngay khi load trang
         updateLedStatus();
+        updateSensorData();
     </script>
 </body>
 </html>

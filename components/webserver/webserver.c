@@ -6,6 +6,7 @@
 #include "freertos/event_groups.h"
 #include "led.h"
 
+
 // Kết nối với Event Group từ main.c
 extern EventGroupHandle_t led_event_group; // extern để truy cập biến toàn cục đã được khai báo trong main.c
 #define LED_ON_BIT  BIT0 
@@ -59,11 +60,23 @@ static esp_err_t get_status_handler(httpd_req_t *req){
     httpd_resp_send(req, status_str, HTTPD_RESP_USE_STRLEN); // Trả về trạng thái hiện tại
     return ESP_OK;
 }
+// Thêm handler này vào webserver.c
+static esp_err_t dht11_sensor_data_get_handler(httpd_req_t *req) {
+    extern float temperature, humidity; // Lấy từ biến toàn cục trong main.c
+    char json_str[64];
+    
+    // Tạo cấu trúc JSON đơn giản
+    sprintf(json_str, "{\"t\":%.1f,\"h\":%.1f}", temperature, humidity);
+    
+    httpd_resp_set_type(req, "application/json");
+    return httpd_resp_send(req, json_str, HTTPD_RESP_USE_STRLEN);
+}
 
 /* Cấu hình các đường dẫn URI */
 static const httpd_uri_t uri_root = { .uri = "/", .method = HTTP_GET, .handler = root_get_handler };
 static const httpd_uri_t uri_on   = { .uri = "/led_on", .method = HTTP_GET, .handler = led_on_handler };
 static const httpd_uri_t uri_off  = { .uri = "/led_off", .method = HTTP_GET, .handler = led_off_handler };
+static const httpd_uri_t uri_sensor_dht11 = { .uri = "/sensor_data", .method = HTTP_GET, .handler = dht11_sensor_data_get_handler };
 static const httpd_uri_t uri_status = { .uri = "/led_status", .method = HTTP_GET, .handler = get_status_handler };
 
 /* Hàm khởi chạy Server */
@@ -78,6 +91,7 @@ httpd_handle_t start_webserver(void) {
         httpd_register_uri_handler(server, &uri_on);
         httpd_register_uri_handler(server, &uri_off);
         httpd_register_uri_handler(server, &uri_status);
+        httpd_register_uri_handler(server, &uri_sensor_dht11);
         ESP_LOGI(TAG, "Web Server started successfully!");
         return server;
     }

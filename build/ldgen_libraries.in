@@ -161,9 +161,13 @@ $<TARGET_FILE:__idf_json>
 $<TARGET_FILE:idf::led>
 $<TARGET_FILE:idf::button>
 $<TARGET_FILE:idf::wifi>
+$<TARGET_FILE:idf::esp-idf-lib__dht>
+$<TARGET_FILE:idf::DHT11>
+$<TARGET_FILE:__idf_esp-idf-lib__dht>
 $<TARGET_FILE:idf::webserver>
 $<TARGET_FILE:__idf_led>
 $<TARGET_FILE:idf::main>
 $<TARGET_FILE:__idf_button>
 $<TARGET_FILE:__idf_wifi>
+$<TARGET_FILE:__idf_DHT11>
 $<TARGET_FILE:__idf_webserver>

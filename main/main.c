@@ -8,12 +8,50 @@
 #include "nvs_flash.h"
 #include "webserver.h"
 #include "button.h" // Đã có button_event_queue ở đây
+#include "DHT11.h" // Đã có dht11_read ở đây
+#include "light.h" // Đã có light_read ở đây
 
 static const char *TAG = "MAIN";
 
 EventGroupHandle_t led_event_group;
 #define LED_ON_BIT  BIT0
 #define LED_OFF_BIT BIT1
+
+// Biến toàn cục để Webserver có thể truy cập (extern trong webserver.c)
+float temperature = 0.0;
+float humidity = 0.0;
+float light = 0.0; 
+
+void light_task(void *pv){
+    ESP_LOGI(TAG, "Light Task started");
+    light_sensor_init(); // Khởi tạo cảm biến ánh sáng (cấu hình ADC)
+    while(1){
+        light = convert_adc_to_light_percentage(); // Đọc giá trị ánh sáng từ cảm biến
+        ESP_LOGI(TAG, "Light : %.2f%%", light);
+        if(light<30.0){
+            xEventGroupSetBits(led_event_group, LED_ON_BIT); // Bật LED nếu ánh sáng < 30%
+        }else{
+            xEventGroupSetBits(led_event_group, LED_OFF_BIT); // Tắt LED nếu ánh sáng >= 30%
+        }
+        vTaskDelay(pdMS_TO_TICKS(2000)); // Đọc mỗi 2 giây
+    }
+}
+
+void dht11_task(void *pv){
+    ESP_LOGI(TAG, "DHT11 Task started");
+    dht11_init(); // Khởi tạo DHT11 (cấu hình GPIO)
+    while(1){
+        float temp, hum;
+        if (dht11_read(&temp, &hum) == ESP_OK) {
+            temperature = temp;
+            humidity = hum;
+        } else {
+            ESP_LOGE(TAG, "Failed to read from DHT11 sensor");
+        }
+        vTaskDelay(pdMS_TO_TICKS(2000)); // Đọc mỗi 2 giây
+    }
+}
+
 
 void led_task(void *pv){
     int pin_num; // Biến tạm để nhận số chân từ Queue
@@ -81,6 +119,8 @@ void app_main(void)
 
     // 4. Tạo Task (Tăng stack lên 4096 cho an toàn vì có LOG và Queue)
     xTaskCreate(led_task, "Led Task", 4096, NULL, 5, NULL);
+    xTaskCreate(dht11_task, "DHT11 Task", 4096, NULL, 4, NULL); // Tạo thêm task đọc DHT11
+    xTaskCreate(light_task, "Light Task", 4096, NULL, 4, NULL); // Tạo thêm task đọc cảm biến ánh sáng
 
     // 5. Khởi động Web Server
     start_webserver();
