@@ -879,6 +879,13 @@ D:/App/esp_idf/led_project/build/esp-idf/DHT11/CMakeFiles/list_install_component
 D:/App/esp_idf/led_project/build/esp-idf/DHT11/CMakeFiles/install.dir
 D:/App/esp_idf/led_project/build/esp-idf/DHT11/CMakeFiles/install/local.dir
 D:/App/esp_idf/led_project/build/esp-idf/DHT11/CMakeFiles/install/strip.dir
+D:/App/esp_idf/led_project/build/esp-idf/light/CMakeFiles/__idf_light.dir
+D:/App/esp_idf/led_project/build/esp-idf/light/CMakeFiles/edit_cache.dir
+D:/App/esp_idf/led_project/build/esp-idf/light/CMakeFiles/rebuild_cache.dir
+D:/App/esp_idf/led_project/build/esp-idf/light/CMakeFiles/list_install_components.dir
+D:/App/esp_idf/led_project/build/esp-idf/light/CMakeFiles/install.dir
+D:/App/esp_idf/led_project/build/esp-idf/light/CMakeFiles/install/local.dir
+D:/App/esp_idf/led_project/build/esp-idf/light/CMakeFiles/install/strip.dir
 D:/App/esp_idf/led_project/build/esp-idf/webserver/CMakeFiles/__idf_webserver.dir
 D:/App/esp_idf/led_project/build/esp-idf/webserver/CMakeFiles/edit_cache.dir
 D:/App/esp_idf/led_project/build/esp-idf/webserver/CMakeFiles/rebuild_cache.dir

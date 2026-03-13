@@ -1,0 +1,1406 @@
+Command: D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace D:\App\esp_idf\led_project\build\led_project.elf D:\App\esp_idf\led_project\build\bootloader\bootloader.elf --force-color -m 'D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py' '-p' 'COM5'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x2c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xec8
+load:0x4086e610,len:0x31c4
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 31 2026 15:59:01[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (25) boot: efuse block revision: v0.2[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=420b0020 size=21424h (136228) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0003144c vaddr=40800000 size=0ebcch ( 60364) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=a12b0h (660144) map[0m
+[0;32mI (248) esp_image: segment 3: paddr=000e12d8 vaddr=4080ebcc size=0c28ch ( 49804) load[0m
+[0;32mI (260) esp_image: segment 4: paddr=000ed56c vaddr=4081ae60 size=03800h ( 14336) load[0m
+[0;32mI (264) esp_image: segment 5: paddr=000f0d74 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (271) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (271) boot: Disabling RNG early entropy source...[0m
+[0;32mI (285) cpu_start: Unicore app[0m
+[0;32mI (294) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (294) cpu_start: Pro cpu start user code[0m
+[0;32mI (294) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (296) app_init: Application information:[0m
+[0;32mI (300) app_init: Project name:     led_project[0m
+[0;32mI (304) app_init: App version:      5300044-dirty[0m
+[0;32mI (308) app_init: Compile time:     Mar 12 2026 18:56:05[0m
+[0;32mI (313) app_init: ELF file SHA256:  90610c5e0...[0m
+[0;32mI (318) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (322) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (325) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (329) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (333) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (340) heap_init: At 40823B70 len 00058AA0 (354 KiB): RAM[0m
+[0;32mI (345) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (350) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (356) spi_flash: detected chip: generic[0m
+[0;32mI (359) spi_flash: flash io: dio[0m
+[0;32mI (362) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (368) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (375) coexist: coex firmware version: 7260f71[0m
+[0;32mI (379) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (383) main_task: Started on CPU0[0m
+[0;32mI (403) main_task: Calling app_main()[0m
+[0;32mI (403) MAIN: He thong dang khoi dong...[0m
+[0;32mI (413) wifi: Initializing WiFi in station mode...[0m
+[0;32mI (413) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (413) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (423) wifi:wifi driver task: 4082a1d4, prio:23, stack:6656, core=0[0m
+[0;32mI (423) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (423) wifi:wifi certification version: v7.0[0m
+[0;32mI (423) wifi:config NVS flash: enabled[0m
+[0;32mI (433) wifi:config nano formatting: disabled[0m
+[0;32mI (433) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (443) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (443) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (453) wifi:Init management short buffer num: 32[0m
+[0;32mI (453) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (453) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (463) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (463) wifi:Init static rx buffer num: 10[0m
+[0;32mI (473) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (473) wifi_init: rx ba win: 6[0m
+[0;32mI (473) wifi_init: accept mbox: 6[0m
+[0;32mI (483) wifi_init: tcpip mbox: 32[0m
+[0;32mI (483) wifi_init: udp mbox: 6[0m
+[0;32mI (483) wifi_init: tcp mbox: 6[0m
+[0;32mI (493) wifi_init: tcp tx win: 5760[0m
+[0;32mI (493) wifi_init: tcp rx win: 5760[0m
+[0;32mI (493) wifi_init: tcp mss: 1440[0m
+[0;32mI (503) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (503) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (503) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (513) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (523) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (593) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (593) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (593) wifi:(agc)0x600a7128:0xd206ba06, min.avgNF:0xce->0xd2(dB), RCalCount:0x6b, min.RRssi:0xa06(-95.62)[0m
+[0;32mI (603) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (613) wifi:mode : sta (54:32:04:0c:fb:e4)[0m
+[0;32mI (613) wifi:enable tsf[0m
+[0;32mI (623) wifi: WiFi initialization completed.[0m
+[0;32mI (623) BUTTON_COMPONENT: Da khoi tao nut bam tai GPIO 18[0m
+[0;32mI (623) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (633) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (643) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (643) MAIN: DHT11 Task started[0m
+[0;32mI (673) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (673) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (673) MAIN: Light Task started[0m
+[0;32mI (673) LIGHT_SENSOR: Light sensor initialized[0m
+[0;32mI (673) LIGHT_SENSOR: ADC Value: 2977[0m
+[0;32mI (673) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (683) wifi:(trc)phytype:CBW20-SGI, snr:42, maxRate:144, highestRateIdx:0[0m
+[0;33mW (683) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (693) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:42, ampduState:wait operational[0m
+[0;32mI (703) wifi:ifidx:0, rssi:-55, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (713) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:0(no restriction)[0m
+[0;32mI (723) LIGHT_SENSOR: Light Percentage: 27.30%[0m
+[0;32mI (733) MAIN: Light : 27.30%[0m
+[0;32mI (733) WEB_SERVER: Web Server started successfully![0m
+[0;32mI (733) main_task: Returned from app_main()[0m
+[0;32mI (1043) wifi:connected with 509 TQV, aid = 6, channel 11, BW20, bssid = a8:15:4d:e2:2c:78[0m
+[0;32mI (1053) wifi:security: WPA2-PSK, phy:bgn, rssi:-55, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1053) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1053) wifi:pm start, type:1, aid:0x6, trans-BSSID:a8:15:4d:e2:2c:78, BSSID[5]:0x78, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1073) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1073) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1083) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1093) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1103) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1113) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1123) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1133) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1143) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (1153) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100782c, TALO:0xe24d15a8, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (2163) esp_netif_handlers: sta ip: 192.168.83.115, mask: 255.255.255.0, gw: 192.168.83.1[0m
+[0;32mI (2163) wifi: Got IP: 192.168.83.115[0m
+[0;32mI (2693) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (2733) LIGHT_SENSOR: ADC Value: 3024[0m
+[0;32mI (2733) LIGHT_SENSOR: Light Percentage: 26.15%[0m
+[0;32mI (2733) MAIN: Light : 26.15%[0m
+[0;32mI (4713) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (4733) LIGHT_SENSOR: ADC Value: 3024[0m
+[0;32mI (4733) LIGHT_SENSOR: Light Percentage: 26.15%[0m
+[0;32mI (4733) MAIN: Light : 26.15%[0m
+[0;32mI (6733) LIGHT_SENSOR: ADC Value: 3024[0m
+[0;32mI (6733) LIGHT_SENSOR: Light Percentage: 26.15%[0m
+[0;32mI (6733) MAIN: Light : 26.15%[0m
+[0;32mI (6733) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (8733) LIGHT_SENSOR: ADC Value: 3025[0m
+[0;32mI (8733) LIGHT_SENSOR: Light Percentage: 26.13%[0m
+[0;32mI (8733) MAIN: Light : 26.13%[0m
+[0;32mI (8753) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (10733) LIGHT_SENSOR: ADC Value: 3025[0m
+[0;32mI (10733) LIGHT_SENSOR: Light Percentage: 26.13%[0m
+[0;32mI (10733) MAIN: Light : 26.13%[0m
+[0;32mI (10773) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (12733) LIGHT_SENSOR: ADC Value: 3073[0m
+[0;32mI (12733) LIGHT_SENSOR: Light Percentage: 24.96%[0m
+[0;32mI (12733) MAIN: Light : 24.96%[0m
+[0;32mI (12733) LED_TASK: Web: ĐANG BẬT[0m
+[0;32mI (12793) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (14733) LIGHT_SENSOR: ADC Value: 3121[0m
+[0;32mI (14733) LIGHT_SENSOR: Light Percentage: 23.79%[0m
+[0;32mI (14733) MAIN: Light : 23.79%[0m
+[0;32mI (14743) LED_TASK: Web: ĐANG BẬT[0m
+[0;32mI (14813) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (16733) LIGHT_SENSOR: ADC Value: 2945[0m
+[0;32mI (16733) LIGHT_SENSOR: Light Percentage: 28.08%[0m
+[0;32mI (16733) MAIN: Light : 28.08%[0m
+[0;32mI (16833) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (18733) LIGHT_SENSOR: ADC Value: 2945[0m
+[0;32mI (18733) LIGHT_SENSOR: Light Percentage: 28.08%[0m
+[0;32mI (18733) MAIN: Light : 28.08%[0m
+[0;32mI (18853) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (20733) LIGHT_SENSOR: ADC Value: 2960[0m
+[0;32mI (20733) LIGHT_SENSOR: Light Percentage: 27.72%[0m
+[0;32mI (20733) MAIN: Light : 27.72%[0m
+[0;32mI (20873) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (22733) LIGHT_SENSOR: ADC Value: 2097[0m
+[0;32mI (22733) LIGHT_SENSOR: Light Percentage: 48.79%[0m
+[0;32mI (22733) MAIN: Light : 48.79%[0m
+[0;32mI (22893) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (24733) LIGHT_SENSOR: ADC Value: 2064[0m
+[0;32mI (24733) LIGHT_SENSOR: Light Percentage: 49.60%[0m
+[0;32mI (24733) MAIN: Light : 49.60%[0m
+[0;32mI (24913) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (26733) LIGHT_SENSOR: ADC Value: 2144[0m
+[0;32mI (26733) LIGHT_SENSOR: Light Percentage: 47.64%[0m
+[0;32mI (26733) MAIN: Light : 47.64%[0m
+[0;32mI (26933) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (28733) LIGHT_SENSOR: ADC Value: 2096[0m
+[0;32mI (28733) LIGHT_SENSOR: Light Percentage: 48.82%[0m
+[0;32mI (28733) MAIN: Light : 48.82%[0m
+[0;32mI (28953) DHT: Temp: 25.0, Hum: 53.0[0m
+[0;32mI (30733) LIGHT_SENSOR: ADC Value: 2097[0m
+[0;32mI (30733) LIGHT_SENSOR: Light Percentage: 48.79%[0m
+[0;32mI (30733) MAIN: Light : 48.79%[0m
+[0;32mI (30973) DHT: Temp: 25.0, Hum: 54.0[0m
+[0;32mI (32733) LIGHT_SENSOR: ADC Value: 2144[0m
+[0;32mI (32733) LIGHT_SENSOR: Light Percentage: 47.64%[0m
+[0;32mI (32733) MAIN: Light : 47.64%[0m
+[0;32mI (32993) DHT: Temp: 25.0, Hum: 55.0[0m
+[0;32mI (34733) LIGHT_SENSOR: ADC Value: 2897[0m
+[0;32mI (34733) LIGHT_SENSOR: Light Percentage: 29.26%[0m
+[0;32mI (34733) MAIN: Light : 29.26%[0m
+[0;32mI (35013) DHT: Temp: 25.0, Hum: 56.0[0m
+[0;32mI (36173) LED_TASK: Button: Chuyển sang TẮT[0m
+[0;32mI (36733) LIGHT_SENSOR: ADC Value: 2833[0m
+[0;32mI (36733) LIGHT_SENSOR: Light Percentage: 30.82%[0m
+[0;32mI (36733) MAIN: Light : 30.82%[0m
+[0;32mI (37033) DHT: Temp: 25.0, Hum: 56.0[0m
+[0;32mI (38733) LIGHT_SENSOR: ADC Value: 2849[0m
+[0;32mI (38733) LIGHT_SENSOR: Light Percentage: 30.43%[0m
+[0;32mI (38733) MAIN: Light : 30.43%[0m
+[0;32mI (39053) DHT: Temp: 25.0, Hum: 55.0[0m
+[0;32mI (39413) LED_TASK: Button: Chuyển sang BẬT[0m
+[0;32mI (40733) LIGHT_SENSOR: ADC Value: 2849[0m
+[0;32mI (40733) LIGHT_SENSOR: Light Percentage: 30.43%[0m
+[0;32mI (40733) MAIN: Light : 30.43%[0m
+[0;32mI (41073) DHT: Temp: 25.0, Hum: 54.0[0m
+[0;32mI (42733) LIGHT_SENSOR: ADC Value: 2785[0m
+[0;32mI (42733) LIGHT_SENSOR: Light Percentage: 31.99%[0m
+[0;32mI (42733) MAIN: Light : 31.99%[0m
+[0;32mI (43093) DHT: Temp: 25.0, Hum: 54.0[0m
+[0;32mI (44733) LIGHT_SENSOR: ADC Value: 2945[0m
+[0;32mI (44733) LIGHT_SENSOR: Light Percentage: 28.08%[0m
+[0;32mI (44733) MAIN: Light : 28.08%[0m
+[0;32mI (45113) DHT: Temp: 25.0, Hum: 54.0[0m
+[0;32mI (46733) LIGHT_SENSOR: ADC Value: 2177[0m
+[0;32mI (46733) LIGHT_SENSOR: Light Percentage: 46.84%[0m
+[0;32mI (46733) MAIN: Light : 46.84%[0m
+[0;32mI (47133) DHT: Temp: 25.0, Hum: 53.0[0m
+[0;32mI (48733) LIGHT_SENSOR: ADC Value: 2865[0m
+[0;32mI (48733) LIGHT_SENSOR: Light Percentage: 30.04%[0m
+[0;32mI (48733) MAIN: Light : 30.04%[0m
+[0;32mI (49153) DHT: Temp: 25.0, Hum: 53.0[0m
+[0;32mI (50733) LIGHT_SENSOR: ADC Value: 2896[0m
+[0;32mI (50733) LIGHT_SENSOR: Light Percentage: 29.28%[0m
+[0;32mI (50733) MAIN: Light : 29.28%[0m
+[0;32mI (51173) DHT: Temp: 25.0, Hum: 53.0[0m
+[0;32mI (52733) LIGHT_SENSOR: ADC Value: 2897[0m
+[0;32mI (52733) LIGHT_SENSOR: Light Percentage: 29.26%[0m
+[0;32mI (52733) MAIN: Light : 29.26%[0m
+[0;32mI (53193) DHT: Temp: 25.0, Hum: 53.0[0m
+[0;32mI (54733) LIGHT_SENSOR: ADC Value: 2897[0m
+[0;32mI (54733) LIGHT_SENSOR: Light Percentage: 29.26%[0m
+[0;32mI (54733) MAIN: Light : 29.26%[0m
+[0;32mI (55213) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (56733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (56733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (56733) MAIN: Light : 28.89%[0m
+[0;32mI (57233) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (58733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (58733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (58733) MAIN: Light : 28.89%[0m
+[0;32mI (59253) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (60733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (60733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (60733) MAIN: Light : 28.89%[0m
+[0;32mI (61273) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (62733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (62733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (62733) MAIN: Light : 28.86%[0m
+[0;32mI (63293) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (64733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (64733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (64733) MAIN: Light : 28.86%[0m
+[0;32mI (65313) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (66733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (66733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (66733) MAIN: Light : 28.89%[0m
+[0;32mI (67333) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (68733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (68733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (68733) MAIN: Light : 28.89%[0m
+[0;32mI (69353) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (70733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (70733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (70733) MAIN: Light : 28.89%[0m
+[0;32mI (71373) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (72733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (72733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (72733) MAIN: Light : 28.86%[0m
+[0;32mI (73393) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (74733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (74733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (74733) MAIN: Light : 28.89%[0m
+[0;32mI (75413) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (76733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (76733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (76733) MAIN: Light : 28.86%[0m
+[0;32mI (77433) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (78733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (78733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (78733) MAIN: Light : 28.89%[0m
+[0;32mI (79453) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (80733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (80733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (80733) MAIN: Light : 28.89%[0m
+[0;32mI (81473) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (82733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (82733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (82733) MAIN: Light : 28.86%[0m
+[0;32mI (83493) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (84733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (84733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (84733) MAIN: Light : 28.86%[0m
+[0;32mI (85513) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (86733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (86733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (86733) MAIN: Light : 28.89%[0m
+[0;32mI (87533) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (88733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (88733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (88733) MAIN: Light : 28.86%[0m
+[0;32mI (89553) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (90733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (90733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (90733) MAIN: Light : 28.86%[0m
+[0;32mI (91573) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (92733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (92733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (92733) MAIN: Light : 28.86%[0m
+[0;32mI (93593) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (94733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (94733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (94733) MAIN: Light : 28.86%[0m
+[0;32mI (95613) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (96733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (96733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (96733) MAIN: Light : 28.86%[0m
+[0;32mI (97633) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (98733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (98733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (98733) MAIN: Light : 28.89%[0m
+[0;32mI (99653) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (100733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (100733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (100733) MAIN: Light : 28.89%[0m
+[0;32mI (101673) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (102733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (102733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (102733) MAIN: Light : 28.86%[0m
+[0;32mI (103693) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (104733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (104733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (104733) MAIN: Light : 28.89%[0m
+[0;32mI (105713) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (106733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (106733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (106733) MAIN: Light : 28.89%[0m
+[0;32mI (107733) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (108733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (108733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (108733) MAIN: Light : 28.89%[0m
+[0;32mI (109753) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (110733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (110733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (110733) MAIN: Light : 28.86%[0m
+[0;32mI (111773) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (112733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (112733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (112733) MAIN: Light : 28.86%[0m
+[0;32mI (113793) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (114733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (114733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (114733) MAIN: Light : 28.89%[0m
+[0;32mI (115813) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (116733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (116733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (116733) MAIN: Light : 28.86%[0m
+[0;32mI (117833) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (118733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (118733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (118733) MAIN: Light : 28.89%[0m
+[0;32mI (119853) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (120733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (120733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (120733) MAIN: Light : 28.86%[0m
+[0;32mI (121873) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (122733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (122733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (122733) MAIN: Light : 28.89%[0m
+[0;32mI (123893) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (124733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (124733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (124733) MAIN: Light : 28.86%[0m
+[0;32mI (125913) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (126733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (126733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (126733) MAIN: Light : 28.86%[0m
+[0;32mI (127933) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (128733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (128733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (128733) MAIN: Light : 28.86%[0m
+[0;32mI (129953) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (130733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (130733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (130733) MAIN: Light : 28.89%[0m
+[0;32mI (131973) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (132733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (132733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (132733) MAIN: Light : 28.89%[0m
+[0;32mI (133993) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (134733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (134733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (134733) MAIN: Light : 28.86%[0m
+[0;32mI (136013) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (136733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (136733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (136733) MAIN: Light : 28.86%[0m
+[0;32mI (138033) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (138733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (138733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (138733) MAIN: Light : 28.89%[0m
+[0;32mI (140053) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (140733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (140733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (140733) MAIN: Light : 28.86%[0m
+[0;32mI (142073) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (142733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (142733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (142733) MAIN: Light : 28.89%[0m
+[0;32mI (144093) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (144733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (144733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (144733) MAIN: Light : 28.86%[0m
+[0;32mI (146113) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (146733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (146733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (146733) MAIN: Light : 28.89%[0m
+[0;32mI (148133) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (148733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (148733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (148733) MAIN: Light : 28.89%[0m
+[0;32mI (150153) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (150733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (150733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (150733) MAIN: Light : 28.86%[0m
+[0;32mI (152173) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (152733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (152733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (152733) MAIN: Light : 28.89%[0m
+[0;32mI (154193) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (154733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (154733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (154733) MAIN: Light : 28.89%[0m
+[0;32mI (156213) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (156733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (156733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (156733) MAIN: Light : 28.86%[0m
+[0;32mI (158233) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (158733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (158733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (158733) MAIN: Light : 28.89%[0m
+[0;32mI (160253) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (160733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (160733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (160733) MAIN: Light : 28.86%[0m
+[0;32mI (162273) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (162733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (162733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (162733) MAIN: Light : 28.86%[0m
+[0;32mI (164293) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (164733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (164733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (164733) MAIN: Light : 28.89%[0m
+[0;32mI (166313) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (166733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (166733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (166733) MAIN: Light : 28.89%[0m
+[0;32mI (168333) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (168733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (168733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (168733) MAIN: Light : 28.89%[0m
+[0;32mI (170353) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (170733) LIGHT_SENSOR: ADC Value: 2881[0m
+[0;32mI (170733) LIGHT_SENSOR: Light Percentage: 29.65%[0m
+[0;32mI (170733) MAIN: Light : 29.65%[0m
+[0;32mI (172373) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (172733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (172733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (172733) MAIN: Light : 28.86%[0m
+[0;32mI (174393) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (174733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (174733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (174733) MAIN: Light : 28.89%[0m
+[0;32mI (176413) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (176733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (176733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (176733) MAIN: Light : 28.86%[0m
+[0;32mI (178433) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (178733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (178733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (178733) MAIN: Light : 28.89%[0m
+[0;32mI (180453) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (180733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (180733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (180733) MAIN: Light : 28.89%[0m
+[0;32mI (182473) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (182733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (182733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (182733) MAIN: Light : 28.86%[0m
+[0;32mI (184493) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (184733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (184733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (184733) MAIN: Light : 28.86%[0m
+[0;32mI (186513) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (186733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (186733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (186733) MAIN: Light : 28.86%[0m
+[0;32mI (188533) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (188733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (188733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (188733) MAIN: Light : 28.89%[0m
+[0;32mI (190553) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (190733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (190733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (190733) MAIN: Light : 28.86%[0m
+[0;32mI (192573) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (192733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (192733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (192733) MAIN: Light : 28.89%[0m
+[0;32mI (194593) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (194733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (194733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (194733) MAIN: Light : 28.86%[0m
+[0;32mI (196613) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (196733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (196733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (196733) MAIN: Light : 28.89%[0m
+[0;32mI (198633) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (198733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (198733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (198733) MAIN: Light : 28.89%[0m
+[0;32mI (200653) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (200733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (200733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (200733) MAIN: Light : 28.86%[0m
+[0;32mI (202673) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (202733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (202733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (202733) MAIN: Light : 28.86%[0m
+[0;32mI (204693) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (204733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (204733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (204733) MAIN: Light : 28.89%[0m
+[0;32mI (206713) DHT: Temp: 25.0, Hum: 50.0[0m
+[0;32mI (206733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (206733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (206733) MAIN: Light : 28.89%[0m
+[0;32mI (208733) LIGHT_SENSOR: ADC Value: 2880[0m
+[0;32mI (208733) LIGHT_SENSOR: Light Percentage: 29.67%[0m
+[0;32mI (208733) MAIN: Light : 29.67%[0m
+[0;32mI (208733) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (210733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (210733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (210733) MAIN: Light : 28.89%[0m
+[0;32mI (210753) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (212733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (212733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (212733) MAIN: Light : 28.89%[0m
+[0;32mI (212773) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (214733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (214733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (214733) MAIN: Light : 28.86%[0m
+[0;32mI (214793) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (216733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (216733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (216733) MAIN: Light : 28.89%[0m
+[0;32mI (216813) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (218733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (218733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (218733) MAIN: Light : 28.89%[0m
+[0;32mI (218833) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (220733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (220733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (220733) MAIN: Light : 28.89%[0m
+[0;32mI (220853) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (222733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (222733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (222733) MAIN: Light : 28.89%[0m
+[0;32mI (222873) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (224733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (224733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (224733) MAIN: Light : 28.86%[0m
+[0;32mI (224893) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (226733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (226733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (226733) MAIN: Light : 28.89%[0m
+[0;32mI (226913) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (228733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (228733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (228733) MAIN: Light : 28.89%[0m
+[0;32mI (228933) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (230733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (230733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (230733) MAIN: Light : 28.89%[0m
+[0;32mI (230953) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (232733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (232733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (232733) MAIN: Light : 28.89%[0m
+[0;32mI (232973) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (234733) LIGHT_SENSOR: ADC Value: 2881[0m
+[0;32mI (234733) LIGHT_SENSOR: Light Percentage: 29.65%[0m
+[0;32mI (234733) MAIN: Light : 29.65%[0m
+[0;32mI (234993) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (236733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (236733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (236733) MAIN: Light : 28.89%[0m
+[0;32mI (237013) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (238733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (238733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (238733) MAIN: Light : 28.89%[0m
+[0;32mI (239033) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (240733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (240733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (240733) MAIN: Light : 28.86%[0m
+[0;32mI (241053) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (242733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (242733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (242733) MAIN: Light : 28.86%[0m
+[0;32mI (243073) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (244733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (244733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (244733) MAIN: Light : 28.89%[0m
+[0;32mI (245093) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (246733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (246733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (246733) MAIN: Light : 28.86%[0m
+[0;32mI (247113) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (248733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (248733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (248733) MAIN: Light : 28.89%[0m
+[0;32mI (249133) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (250733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (250733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (250733) MAIN: Light : 28.89%[0m
+[0;32mI (251153) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (252733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (252733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (252733) MAIN: Light : 28.86%[0m
+[0;32mI (253173) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (254733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (254733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (254733) MAIN: Light : 28.89%[0m
+[0;32mI (255193) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (256733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (256733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (256733) MAIN: Light : 28.89%[0m
+[0;32mI (257213) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (258733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (258733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (258733) MAIN: Light : 28.86%[0m
+[0;32mI (259233) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (260733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (260733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (260733) MAIN: Light : 28.86%[0m
+[0;32mI (261253) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (262733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (262733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (262733) MAIN: Light : 28.86%[0m
+[0;32mI (263273) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (264733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (264733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (264733) MAIN: Light : 28.89%[0m
+[0;32mI (265293) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (266733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (266733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (266733) MAIN: Light : 28.86%[0m
+[0;32mI (267313) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (268733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (268733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (268733) MAIN: Light : 28.86%[0m
+[0;32mI (269333) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (270733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (270733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (270733) MAIN: Light : 28.86%[0m
+[0;32mI (271353) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (272733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (272733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (272733) MAIN: Light : 28.89%[0m
+[0;32mI (273373) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (274733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (274733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (274733) MAIN: Light : 28.89%[0m
+[0;32mI (275393) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (276733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (276733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (276733) MAIN: Light : 28.86%[0m
+[0;32mI (277413) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (278733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (278733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (278733) MAIN: Light : 28.89%[0m
+[0;32mI (279433) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (280733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (280733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (280733) MAIN: Light : 28.89%[0m
+[0;32mI (281453) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (282733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (282733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (282733) MAIN: Light : 28.89%[0m
+[0;32mI (283473) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (284733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (284733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (284733) MAIN: Light : 28.86%[0m
+[0;32mI (285493) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (286733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (286733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (286733) MAIN: Light : 28.86%[0m
+[0;32mI (287513) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (288733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (288733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (288733) MAIN: Light : 28.86%[0m
+[0;32mI (289533) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (290733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (290733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (290733) MAIN: Light : 28.86%[0m
+[0;32mI (291553) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (292733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (292733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (292733) MAIN: Light : 28.86%[0m
+[0;32mI (293573) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (294733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (294733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (294733) MAIN: Light : 28.86%[0m
+[0;32mI (295593) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (296733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (296733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (296733) MAIN: Light : 28.89%[0m
+[0;32mI (297613) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (298733) LIGHT_SENSOR: ADC Value: 2880[0m
+[0;32mI (298733) LIGHT_SENSOR: Light Percentage: 29.67%[0m
+[0;32mI (298733) MAIN: Light : 29.67%[0m
+[0;32mI (299633) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (300733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (300733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (300733) MAIN: Light : 28.89%[0m
+[0;32mI (301653) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (302733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (302733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (302733) MAIN: Light : 28.86%[0m
+[0;32mI (303673) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (304733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (304733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (304733) MAIN: Light : 28.89%[0m
+[0;32mI (305693) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (306733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (306733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (306733) MAIN: Light : 28.89%[0m
+[0;32mI (307713) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (308733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (308733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (308733) MAIN: Light : 28.86%[0m
+[0;32mI (309733) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (310733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (310733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (310733) MAIN: Light : 28.86%[0m
+[0;32mI (311753) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (312733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (312733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (312733) MAIN: Light : 28.86%[0m
+[0;32mI (313773) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (314733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (314733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (314733) MAIN: Light : 28.89%[0m
+[0;32mI (315793) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (316733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (316733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (316733) MAIN: Light : 28.89%[0m
+[0;32mI (317813) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (318733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (318733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (318733) MAIN: Light : 28.89%[0m
+[0;32mI (319833) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (320733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (320733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (320733) MAIN: Light : 28.86%[0m
+[0;32mI (321853) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (322733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (322733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (322733) MAIN: Light : 28.86%[0m
+[0;32mI (323873) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (324733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (324733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (324733) MAIN: Light : 28.89%[0m
+[0;32mI (325893) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (326733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (326733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (326733) MAIN: Light : 28.86%[0m
+[0;32mI (327913) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (328733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (328733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (328733) MAIN: Light : 28.86%[0m
+[0;32mI (329933) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (330733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (330733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (330733) MAIN: Light : 28.89%[0m
+[0;32mI (331953) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (332733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (332733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (332733) MAIN: Light : 28.86%[0m
+[0;32mI (333973) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (334733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (334733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (334733) MAIN: Light : 28.86%[0m
+[0;32mI (335993) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (336733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (336733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (336733) MAIN: Light : 28.86%[0m
+[0;32mI (338013) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (338733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (338733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (338733) MAIN: Light : 28.89%[0m
+[0;32mI (340033) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (340733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (340733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (340733) MAIN: Light : 28.86%[0m
+[0;32mI (342053) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (342733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (342733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (342733) MAIN: Light : 28.89%[0m
+[0;32mI (344073) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (344733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (344733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (344733) MAIN: Light : 28.86%[0m
+[0;32mI (346093) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (346733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (346733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (346733) MAIN: Light : 28.86%[0m
+[0;32mI (348113) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (348733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (348733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (348733) MAIN: Light : 28.86%[0m
+[0;32mI (350133) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (350733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (350733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (350733) MAIN: Light : 28.86%[0m
+[0;32mI (352153) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (352733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (352733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (352733) MAIN: Light : 28.89%[0m
+[0;32mI (354173) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (354733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (354733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (354733) MAIN: Light : 28.86%[0m
+[0;32mI (356193) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (356733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (356733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (356733) MAIN: Light : 28.89%[0m
+[0;32mI (358213) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (358733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (358733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (358733) MAIN: Light : 28.89%[0m
+[0;32mI (360233) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (360733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (360733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (360733) MAIN: Light : 28.86%[0m
+[0;32mI (362253) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (362733) LIGHT_SENSOR: ADC Value: 2880[0m
+[0;32mI (362733) LIGHT_SENSOR: Light Percentage: 29.67%[0m
+[0;32mI (362733) MAIN: Light : 29.67%[0m
+[0;32mI (364273) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (364733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (364733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (364733) MAIN: Light : 28.89%[0m
+[0;32mI (366293) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (366733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (366733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (366733) MAIN: Light : 28.86%[0m
+[0;32mI (368313) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (368733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (368733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (368733) MAIN: Light : 28.89%[0m
+[0;32mI (370333) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (370733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (370733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (370733) MAIN: Light : 28.89%[0m
+[0;32mI (372353) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (372733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (372733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (372733) MAIN: Light : 28.89%[0m
+[0;32mI (374373) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (374733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (374733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (374733) MAIN: Light : 28.89%[0m
+[0;32mI (376393) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (376733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (376733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (376733) MAIN: Light : 28.89%[0m
+[0;32mI (378413) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (378733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (378733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (378733) MAIN: Light : 28.86%[0m
+[0;32mI (380433) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (380733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (380733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (380733) MAIN: Light : 28.86%[0m
+[0;32mI (382453) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (382733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (382733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (382733) MAIN: Light : 28.86%[0m
+[0;32mI (384473) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (384733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (384733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (384733) MAIN: Light : 28.89%[0m
+[0;32mI (386493) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (386733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (386733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (386733) MAIN: Light : 28.86%[0m
+[0;32mI (388513) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (388733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (388733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (388733) MAIN: Light : 28.86%[0m
+[0;32mI (390533) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (390733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (390733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (390733) MAIN: Light : 28.86%[0m
+[0;32mI (392553) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (392733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (392733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (392733) MAIN: Light : 28.89%[0m
+[0;32mI (394573) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (394733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (394733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (394733) MAIN: Light : 28.86%[0m
+[0;32mI (396593) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (396733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (396733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (396733) MAIN: Light : 28.89%[0m
+[0;32mI (398613) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (398733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (398733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (398733) MAIN: Light : 28.89%[0m
+[0;32mI (400633) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (400733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (400733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (400733) MAIN: Light : 28.86%[0m
+[0;32mI (402653) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (402733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (402733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (402733) MAIN: Light : 28.89%[0m
+[0;32mI (404673) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (404733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (404733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (404733) MAIN: Light : 28.86%[0m
+[0;32mI (406693) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (406733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (406733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (406733) MAIN: Light : 28.86%[0m
+[0;32mI (408713) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (408733) LIGHT_SENSOR: ADC Value: 2880[0m
+[0;32mI (408733) LIGHT_SENSOR: Light Percentage: 29.67%[0m
+[0;32mI (408733) MAIN: Light : 29.67%[0m
+[0;32mI (410733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (410733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (410733) MAIN: Light : 28.89%[0m
+[0;32mI (410733) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (412733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (412733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (412733) MAIN: Light : 28.89%[0m
+[0;32mI (412753) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (414733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (414733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (414733) MAIN: Light : 28.89%[0m
+[0;32mI (414773) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (416733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (416733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (416733) MAIN: Light : 28.86%[0m
+[0;32mI (416793) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (418733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (418733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (418733) MAIN: Light : 28.86%[0m
+[0;32mI (418813) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (420733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (420733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (420733) MAIN: Light : 28.86%[0m
+[0;32mI (420833) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (422733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (422733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (422733) MAIN: Light : 28.89%[0m
+[0;32mI (422853) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (424733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (424733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (424733) MAIN: Light : 28.89%[0m
+[0;32mI (424873) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (426733) LIGHT_SENSOR: ADC Value: 2881[0m
+[0;32mI (426733) LIGHT_SENSOR: Light Percentage: 29.65%[0m
+[0;32mI (426733) MAIN: Light : 29.65%[0m
+[0;32mI (426893) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (428733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (428733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (428733) MAIN: Light : 28.89%[0m
+[0;32mI (428913) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (430733) LIGHT_SENSOR: ADC Value: 2880[0m
+[0;32mI (430733) LIGHT_SENSOR: Light Percentage: 29.67%[0m
+[0;32mI (430733) MAIN: Light : 29.67%[0m
+[0;32mI (430933) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (432733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (432733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (432733) MAIN: Light : 28.89%[0m
+[0;32mI (432953) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (434733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (434733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (434733) MAIN: Light : 28.89%[0m
+[0;32mI (434973) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (436733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (436733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (436733) MAIN: Light : 28.89%[0m
+[0;32mI (436993) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (438733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (438733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (438733) MAIN: Light : 28.89%[0m
+[0;32mI (439013) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (440733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (440733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (440733) MAIN: Light : 28.86%[0m
+[0;32mI (441033) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (442733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (442733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (442733) MAIN: Light : 28.86%[0m
+[0;32mI (443053) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (444733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (444733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (444733) MAIN: Light : 28.89%[0m
+[0;32mI (445073) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (446733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (446733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (446733) MAIN: Light : 28.86%[0m
+[0;32mI (447093) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (448733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (448733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (448733) MAIN: Light : 28.89%[0m
+[0;32mI (449113) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (450733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (450733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (450733) MAIN: Light : 28.89%[0m
+[0;32mI (451133) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (452733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (452733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (452733) MAIN: Light : 28.86%[0m
+[0;32mI (453153) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (454733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (454733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (454733) MAIN: Light : 28.86%[0m
+[0;32mI (455173) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (456733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (456733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (456733) MAIN: Light : 28.89%[0m
+[0;32mI (457193) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (458733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (458733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (458733) MAIN: Light : 28.89%[0m
+[0;32mI (459213) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (460733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (460733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (460733) MAIN: Light : 28.89%[0m
+[0;32mI (461233) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (462733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (462733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (462733) MAIN: Light : 28.86%[0m
+[0;32mI (463253) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (464733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (464733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (464733) MAIN: Light : 28.89%[0m
+[0;32mI (465273) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (466733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (466733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (466733) MAIN: Light : 28.86%[0m
+[0;32mI (467293) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (468733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (468733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (468733) MAIN: Light : 28.89%[0m
+[0;32mI (469313) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (470733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (470733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (470733) MAIN: Light : 28.86%[0m
+[0;32mI (471333) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (472733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (472733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (472733) MAIN: Light : 28.89%[0m
+[0;32mI (473353) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (474733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (474733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (474733) MAIN: Light : 28.86%[0m
+[0;32mI (475373) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (476733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (476733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (476733) MAIN: Light : 28.89%[0m
+[0;32mI (477393) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (478733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (478733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (478733) MAIN: Light : 28.86%[0m
+[0;32mI (479413) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (480733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (480733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (480733) MAIN: Light : 28.89%[0m
+[0;32mI (481433) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (482733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (482733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (482733) MAIN: Light : 28.89%[0m
+[0;32mI (483453) DHT: Temp: 25.0, Hum: 52.0[0m
+[0;32mI (484733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (484733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (484733) MAIN: Light : 28.86%[0m
+[0;32mI (485473) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (486733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (486733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (486733) MAIN: Light : 28.89%[0m
+[0;32mI (487493) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (488733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (488733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (488733) MAIN: Light : 28.86%[0m
+[0;32mI (489513) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (490733) LIGHT_SENSOR: ADC Value: 2880[0m
+[0;32mI (490733) LIGHT_SENSOR: Light Percentage: 29.67%[0m
+[0;32mI (490733) MAIN: Light : 29.67%[0m
+[0;32mI (491533) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (492733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (492733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (492733) MAIN: Light : 28.89%[0m
+[0;32mI (493553) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (494733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (494733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (494733) MAIN: Light : 28.86%[0m
+[0;32mI (495573) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (496733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (496733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (496733) MAIN: Light : 28.86%[0m
+[0;32mI (497593) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (498733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (498733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (498733) MAIN: Light : 28.86%[0m
+[0;32mI (499613) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (500733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (500733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (500733) MAIN: Light : 28.86%[0m
+[0;32mI (501633) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (502733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (502733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (502733) MAIN: Light : 28.89%[0m
+[0;32mI (503653) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (504733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (504733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (504733) MAIN: Light : 28.86%[0m
+[0;32mI (505673) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (506733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (506733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (506733) MAIN: Light : 28.89%[0m
+[0;32mI (507693) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (508733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (508733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (508733) MAIN: Light : 28.89%[0m
+[0;32mI (509713) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (510733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (510733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (510733) MAIN: Light : 28.89%[0m
+[0;32mI (511733) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (512733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (512733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (512733) MAIN: Light : 28.89%[0m
+[0;32mI (513753) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (514733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (514733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (514733) MAIN: Light : 28.89%[0m
+[0;32mI (515773) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (516733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (516733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (516733) MAIN: Light : 28.86%[0m
+[0;32mI (517793) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (518733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (518733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (518733) MAIN: Light : 28.86%[0m
+[0;32mI (519813) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (520733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (520733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (520733) MAIN: Light : 28.89%[0m
+[0;32mI (521833) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (522733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (522733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (522733) MAIN: Light : 28.89%[0m
+[0;32mI (523853) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (524733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (524733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (524733) MAIN: Light : 28.89%[0m
+[0;32mI (525873) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (526733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (526733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (526733) MAIN: Light : 28.89%[0m
+[0;32mI (527893) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (528733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (528733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (528733) MAIN: Light : 28.89%[0m
+[0;32mI (529913) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (530733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (530733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (530733) MAIN: Light : 28.86%[0m
+[0;32mI (531933) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (532733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (532733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (532733) MAIN: Light : 28.89%[0m
+[0;32mI (533953) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (534733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (534733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (534733) MAIN: Light : 28.86%[0m
+[0;32mI (535973) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (536733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (536733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (536733) MAIN: Light : 28.89%[0m
+[0;32mI (537993) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (538733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (538733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (538733) MAIN: Light : 28.89%[0m
+[0;32mI (540013) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (540733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (540733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (540733) MAIN: Light : 28.89%[0m
+[0;32mI (542033) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (542733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (542733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (542733) MAIN: Light : 28.86%[0m
+[0;32mI (544053) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (544733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (544733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (544733) MAIN: Light : 28.86%[0m
+[0;32mI (546073) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (546733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (546733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (546733) MAIN: Light : 28.89%[0m
+[0;32mI (548093) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (548733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (548733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (548733) MAIN: Light : 28.86%[0m
+[0;32mI (550113) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (550733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (550733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (550733) MAIN: Light : 28.89%[0m
+[0;32mI (552133) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (552733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (552733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (552733) MAIN: Light : 28.89%[0m
+[0;32mI (554153) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (554733) LIGHT_SENSOR: ADC Value: 2881[0m
+[0;32mI (554733) LIGHT_SENSOR: Light Percentage: 29.65%[0m
+[0;32mI (554733) MAIN: Light : 29.65%[0m
+[0;32mI (556173) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (556733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (556733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (556733) MAIN: Light : 28.89%[0m
+[0;32mI (558193) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (558733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (558733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (558733) MAIN: Light : 28.89%[0m
+[0;32mI (560213) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (560733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (560733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (560733) MAIN: Light : 28.86%[0m
+[0;32mI (562233) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (562733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (562733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (562733) MAIN: Light : 28.89%[0m
+[0;32mI (564253) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (564733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (564733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (564733) MAIN: Light : 28.89%[0m
+[0;32mI (566273) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (566733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (566733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (566733) MAIN: Light : 28.86%[0m
+[0;32mI (568293) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (568733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (568733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (568733) MAIN: Light : 28.89%[0m
+[0;32mI (570313) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (570733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (570733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (570733) MAIN: Light : 28.86%[0m
+[0;32mI (572333) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (572733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (572733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (572733) MAIN: Light : 28.86%[0m
+[0;32mI (574353) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (574733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (574733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (574733) MAIN: Light : 28.86%[0m
+[0;32mI (576373) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (576733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (576733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (576733) MAIN: Light : 28.89%[0m
+[0;32mI (578393) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (578733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (578733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (578733) MAIN: Light : 28.89%[0m
+[0;32mI (580413) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (580733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (580733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (580733) MAIN: Light : 28.86%[0m
+[0;32mI (582433) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (582733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (582733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (582733) MAIN: Light : 28.89%[0m
+[0;32mI (584453) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (584733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (584733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (584733) MAIN: Light : 28.89%[0m
+[0;32mI (586473) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (586733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (586733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (586733) MAIN: Light : 28.86%[0m
+[0;32mI (588493) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (588733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (588733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (588733) MAIN: Light : 28.86%[0m
+[0;32mI (590513) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (590733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (590733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (590733) MAIN: Light : 28.89%[0m
+[0;32mI (592533) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (592733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (592733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (592733) MAIN: Light : 28.89%[0m
+[0;32mI (594553) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (594733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (594733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (594733) MAIN: Light : 28.86%[0m
+[0;32mI (596573) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (596733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (596733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (596733) MAIN: Light : 28.89%[0m
+[0;32mI (598593) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (598733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (598733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (598733) MAIN: Light : 28.89%[0m
+[0;32mI (600613) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (600733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (600733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (600733) MAIN: Light : 28.86%[0m
+[0;32mI (602633) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (602733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (602733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (602733) MAIN: Light : 28.86%[0m
+[0;32mI (604653) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (604733) LIGHT_SENSOR: ADC Value: 2929[0m
+[0;32mI (604733) LIGHT_SENSOR: Light Percentage: 28.47%[0m
+[0;32mI (604733) MAIN: Light : 28.47%[0m
+[0;32mI (606673) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (606733) LIGHT_SENSOR: ADC Value: 2928[0m
+[0;32mI (606733) LIGHT_SENSOR: Light Percentage: 28.50%[0m
+[0;32mI (606733) MAIN: Light : 28.50%[0m
+[0;32mI (608693) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (608733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (608733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (608733) MAIN: Light : 28.89%[0m
+[0;32mI (610713) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (610733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (610733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (610733) MAIN: Light : 28.89%[0m
+[0;32mI (612733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (612733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (612733) MAIN: Light : 28.86%[0m
+[0;32mI (612733) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (614733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (614733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (614733) MAIN: Light : 28.89%[0m
+[0;32mI (614753) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (616733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (616733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (616733) MAIN: Light : 28.89%[0m
+[0;32mI (616773) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (618733) LIGHT_SENSOR: ADC Value: 2880[0m
+[0;32mI (618733) LIGHT_SENSOR: Light Percentage: 29.67%[0m
+[0;32mI (618733) MAIN: Light : 29.67%[0m
+[0;32mI (618793) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (620733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (620733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (620733) MAIN: Light : 28.86%[0m
+[0;32mI (620813) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (622733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (622733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (622733) MAIN: Light : 28.86%[0m
+[0;32mI (622833) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (624733) LIGHT_SENSOR: ADC Value: 2912[0m
+[0;32mI (624733) LIGHT_SENSOR: Light Percentage: 28.89%[0m
+[0;32mI (624733) MAIN: Light : 28.89%[0m
+[0;32mI (624853) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (626733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (626733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (626733) MAIN: Light : 28.86%[0m
+[0;32mI (626873) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (628733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (628733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (628733) MAIN: Light : 28.86%[0m
+[0;32mI (628893) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (630733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (630733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (630733) MAIN: Light : 28.86%[0m
+[0;32mI (630913) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (632733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (632733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (632733) MAIN: Light : 28.86%[0m
+[0;32mI (632933) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (634733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (634733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (634733) MAIN: Light : 28.86%[0m
+[0;32mI (634953) DHT: Temp: 25.0, Hum: 51.0[0m
+[0;32mI (636733) LIGHT_SENSOR: ADC Value: 2913[0m
+[0;32mI (636733) LIGHT_SENSOR: Light Percentage: 28.86%[0m
+[0;32mI (636733) MAIN: Light : 28.86%[0m
+[0;32mI (636973) DHT: Temp: 25.0, Hum: 51.0[0m

@@ -10,12 +10,11 @@
 #include "button.h" // Đã có button_event_queue ở đây
 #include "DHT11.h" // Đã có dht11_read ở đây
 #include "light.h" // Đã có light_read ở đây
+#include "control.h" // Đã có control_queue ở đây
+
+QueueHandle_t control_queue;
 
 static const char *TAG = "MAIN";
-
-EventGroupHandle_t led_event_group;
-#define LED_ON_BIT  BIT0
-#define LED_OFF_BIT BIT1
 
 // Biến toàn cục để Webserver có thể truy cập (extern trong webserver.c)
 float temperature = 0.0;
@@ -28,11 +27,17 @@ void light_task(void *pv){
     while(1){
         light = convert_adc_to_light_percentage(); // Đọc giá trị ánh sáng từ cảm biến
         ESP_LOGI(TAG, "Light : %.2f%%", light);
-        if(light<30.0){
-            xEventGroupSetBits(led_event_group, LED_ON_BIT); // Bật LED nếu ánh sáng < 30%
-        }else{
-            xEventGroupSetBits(led_event_group, LED_OFF_BIT); // Tắt LED nếu ánh sáng >= 30%
+        
+        control_message_t msg;
+        msg.source = SRC_LIGHT;
+        if (light < 25.0) {
+            msg.cmd = LED_CMD_ON;
+            xQueueSend(control_queue, &msg, 0); // Gửi lệnh bật LED nếu ánh sáng yếu
+        } else {
+            msg.cmd = LED_CMD_OFF;
+            xQueueSend(control_queue, &msg, 0); // Gửi lệnh tắt LED nếu ánh sáng đủ
         }
+
         vTaskDelay(pdMS_TO_TICKS(2000)); // Đọc mỗi 2 giây
     }
 }
@@ -52,54 +57,52 @@ void dht11_task(void *pv){
     }
 }
 
-
-void led_task(void *pv){
-    int pin_num; // Biến tạm để nhận số chân từ Queue
+void button_task(void *pv){
+    int pin;
     while(1){
-        // --- NHÁNH 1: ĐỢI LỆNH TỪ WEB (Timeout 10ms thay vì MAX_DELAY) ---
-        EventBits_t bits = xEventGroupWaitBits(
-            led_event_group, 
-            LED_ON_BIT | LED_OFF_BIT, 
-            pdTRUE,             
-            pdFALSE,            
-            pdMS_TO_TICKS(10)   // Chỉ đợi 10ms rồi kiểm tra tiếp việc khác
-        );
-
-        if(bits & LED_ON_BIT){
-            led_on();
-            ESP_LOGI("LED_TASK", "Web: ĐANG BẬT");
-        }
-        if(bits & LED_OFF_BIT){
-            led_off();
-            ESP_LOGI("LED_TASK", "Web: ĐANG TẮT");
-        }
-
-        // --- NHÁNH 2: ĐỢI LỆNH TỪ NÚT BẤM (QUEUE) ---
-        // button_event_queue phải khớp với tên trong button.h của bạn
-        if (xQueueReceive(button_event_queue, &pin_num, pdMS_TO_TICKS(10))) {
+        if(xQueueReceive(button_event_queue, &pin, portMAX_DELAY)) {
             // Chống rung (Debounce) đơn giản
             vTaskDelay(pdMS_TO_TICKS(50));
             
-            if (gpio_get_level(pin_num) == 0) { // Nếu vẫn đang nhấn (mức thấp)
-                // Đảo trạng thái LED
-                if (led_get_state() == 1) {
-                    led_off();
-                    ESP_LOGI("LED_TASK", "Button: Chuyển sang TẮT");
-                } else {
-                    led_on();
-                    ESP_LOGI("LED_TASK", "Button: Chuyển sang BẬT");
-                }
+            if (gpio_get_level(pin) == 0) { // Nếu vẫn đang nhấn (mức thấp)
+                control_message_t msg;
+                msg.source = SRC_BUTTON;
+                msg.cmd = LED_CMD_TOGGLE; // Gửi lệnh toggle để đảo trạng thái LED
+                xQueueSend(control_queue, &msg, 0);
             }
         }
-        
-        // Tránh chiếm dụng CPU quá mức
-        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+}
+
+void led_task(void *pv){
+    control_message_t msg;
+    while(1){
+        if(xQueueReceive(control_queue, &msg, portMAX_DELAY)) {
+            switch(msg.cmd) {
+                case LED_CMD_ON:
+                    led_on();
+                    break;
+                case LED_CMD_OFF:
+                    led_off();
+                    break;
+                case LED_CMD_TOGGLE:
+                    led_toggle();
+                    break;
+            }
+        }
     }
 }
 
 void app_main(void)
 {
     ESP_LOGI(TAG, "He thong dang khoi dong...");
+
+    control_queue = xQueueCreate(10, sizeof(control_message_t));
+
+    if(control_queue == NULL){
+        ESP_LOGE(TAG, "Queue create failed!");
+        return;
+    }
 
     // 1. Khởi tạo NVS
     esp_err_t ret = nvs_flash_init();
@@ -113,7 +116,6 @@ void app_main(void)
     wifi_init_sta();
 
     // 3. Phần cứng (Lưu ý: Khởi tạo Event Group TRƯỚC khi khởi tạo Button/Web)
-    led_event_group = xEventGroupCreate();
     led_init(GPIO_NUM_20);
     button_init(BUTTON_GPIO_PIN); 
 
@@ -121,6 +123,7 @@ void app_main(void)
     xTaskCreate(led_task, "Led Task", 4096, NULL, 5, NULL);
     xTaskCreate(dht11_task, "DHT11 Task", 4096, NULL, 4, NULL); // Tạo thêm task đọc DHT11
     xTaskCreate(light_task, "Light Task", 4096, NULL, 4, NULL); // Tạo thêm task đọc cảm biến ánh sáng
+    xTaskCreate(button_task, "Button Task", 4096, NULL, 4, NULL); // Tạo thêm task xử lý nút bấm
 
     // 5. Khởi động Web Server
     start_webserver();

@@ -589,6 +589,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/App/esp_idf/led_project/build/esp-idf/light/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/App/esp_idf/led_project/build/esp-idf/webserver/cmake_install.cmake")
 endif()
 

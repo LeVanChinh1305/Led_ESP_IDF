@@ -8,7 +8,7 @@
 #include "hal/adc_types.h" // Thư viện ADC cho ESP32
 
 // đinh nghĩa chân ADC cho cảm biến ánh sáng (ví dụ: ADC1_CHANNEL_0 là GPIO36 trên ESP32)
-#define LIGHT_SENSOR_CHANNEL ADC1_CHANNEL_1
+#define LIGHT_SENSOR_CHANNEL ADC_CHANNEL_1
 
 // hàm khởi tạo cảm biến ánh sáng
 void light_sensor_init(void);

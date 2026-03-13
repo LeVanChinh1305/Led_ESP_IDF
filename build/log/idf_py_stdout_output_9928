@@ -1,0 +1,20 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\App\esp_idf\led_project\build\bootloader\esp-idf\esptool_py && D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/App/esp_idf/Espressif/frameworks/esp-idf-v5.5.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/App/esp_idf/led_project/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5840 bytes. 0x27c0 bytes (31%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable led_project.elf
+FAILED: led_project.elf 
+C:\Windows\system32\cmd.exe /C "cd . && D:\App\esp_idf\Espressif\tools\riscv32-esp-elf\esp-14.2.0_20251107\riscv32-esp-elf\bin\riscv32-esp-elf-g++.exe -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32C6=0 -Wl,--Map=D:/App/esp_idf/led_project/build/led_project.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T rom.api.ld -T esp32c6.peripherals.ld -T esp32c6.rom.ld -T esp32c6.rom.api.ld -T esp32c6.rom.rvfp.ld -T esp32c6.rom.wdt.ld -T esp32c6.rom.systimer.ld -T esp32c6.rom.version.ld -T esp32c6.rom.phy.ld -T esp32c6.rom.coexist.ld -T esp32c6.rom.net80211.ld -T esp32c6.rom.pp.ld -T esp32c6.rom.libc.ld -T esp32c6.rom.libc-suboptimal_for_misaligned_mem.ld -T esp32c6.rom.newlib.ld -T esp32c6.rom.newlib-normal.ld -T esp32c6.rom.heap.ld -T memory.ld -T sections.ld @CMakeFiles\led_project.elf.rsp -o led_project.elf && cd ."
+D:/App/esp_idf/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20251107/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: esp-idf/webserver/libwebserver.a(webserver.c.obj): in function `get_status_handler':
+D:/App/esp_idf/led_project/components/webserver/webserver.c:58:(.text.led_off_handler+0x8): undefined reference to `led_event_group'
+D:/App/esp_idf/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20251107/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: D:/App/esp_idf/led_project/components/webserver/webserver.c:58:(.text.led_off_handler+0xc): undefined reference to `led_event_group'
+D:/App/esp_idf/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20251107/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: esp-idf/webserver/libwebserver.a(webserver.c.obj): in function `led_on_handler':
+D:/App/esp_idf/led_project/components/webserver/webserver.c:35:(.text.led_on_handler+0x8): undefined reference to `led_event_group'
+D:/App/esp_idf/Espressif/tools/riscv32-esp-elf/esp-14.2.0_20251107/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld.exe: D:/App/esp_idf/led_project/components/webserver/webserver.c:35:(.text.led_on_handler+0xc): undefined reference to `led_event_group'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
